@@ -1,67 +1,461 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insight Hunter — Versions Hub</title>
+  <title>Insight Lite — Fast, Local-First Financial Clarity for Founders</title>
+  <meta name="description" content="Insight Lite is your zero-friction launchpad to financial intelligence. Local-first, instant, and spreadsheet-free. Perfect for solo founders, freelancers, and lean teams." />
+  <meta name="keywords" content="financial clarity, burn rate calculator, cash flow analysis, startup finance, local-first app" />
+  <meta property="og:title" content="Insight Lite — Financial Clarity in 60 Seconds" />
+  <meta property="og:description" content="No spreadsheets. No setup. No noise. Just answers." />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-section .tagline {
+      font-size: 1.2rem;
+      color: #00d4ff;
+      margin-bottom: 1rem;
+    }
+    .cta-primary {
+      background: #00d4ff;
+      color: #1a1a2e;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .cta-primary:hover {
+      background: #00a8cc;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 212, 255, 0.3);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .feature-card {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      border-left: 4px solid #00d4ff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transform: translateY(-4px);
+    }
+    .feature-card h3 {
+      color: #1a1a2e;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .feature-card p {
+      color: #555;
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .stats-section {
+      background: #f0f8ff;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .stat {
+      display: inline-block;
+      margin: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+    .stat .number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00d4ff;
+    }
+    .stat .label {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .comparison-section {
+      margin: 2rem 0;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    .comparison-table th {
+      background: #f9f9f9;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+    .comparison-table tr:nth-child(even) {
+      background: #fafafa;
+    }
+    .check {
+      color: #00d4ff;
+      font-weight: bold;
+    }
+    .testimonial-section {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      border-left: 4px solid #00d4ff;
+    }
+    .testimonial {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .testimonial-author {
+      color: #00d4ff;
+      font-weight: 600;
+      font-style: normal;
+    }
+    .faq-section {
+      margin: 2rem 0;
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-question {
+      font-weight: 600;
+      color: #1a1a2e;
+      cursor: pointer;
+      user-select: none;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .faq-question:hover {
+      background: #efefef;
+    }
+    .faq-answer {
+      padding: 1rem;
+      color: #555;
+      display: none;
+      background: #fafafa;
+      border-radius: 0 0 6px 6px;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-section h2 {
+      margin-bottom: 1rem;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #00d4ff;
+      border: 2px solid #00d4ff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .btn-secondary:hover {
+      background: #00d4ff;
+      color: #1a1a2e;
+    }
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat {
+        display: block;
+        margin: 1rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <a href="/" class="logo">Insight Hunter</a>
+    <nav>
+      <a href="/full">Full</a>
+      <a href="/scout">Scout</a>
+      <a href="/lite">Lite</a>
+      <a href="/forms">Forms</a>
+      <a href="/standard">Standard</a>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Insight Lite</h1>
+    <p class="tagline">The fastest way to financial clarity — no spreadsheets, no setup, no noise.</p>
+    <p style="font-size: 1rem; color: #ccc; margin-bottom: 1.5rem;">Get crystal-clear insights in under 60 seconds. Perfect for solo founders, freelancers, and lean teams.</p>
+    <a href="#download" class="cta-primary">Download Free Today</a>
+  </section>
 
-<header class="site-header">
-  <a href="/" class="logo">Insight Hunter</a>
-  <nav>
-    <a href="/full">Full</a>
-    <a href="/scout">Scout</a>
-    <a href="/lite">Lite</a>
-    <a href="/forms">Forms</a>
-    <a href="/standard">Standard</a>
-  </nav>
-</header>
+  <main class="content" style="padding:0 2rem;max-width:900px;margin:0 auto;">
+    
+    <!-- Problem Statement -->
+    <section style="margin: 2rem 0;">
+      <h2>Why Insight Lite?</h2>
+      <p>Spreadsheets are slow. Accounting software is overwelming. You need financial clarity <strong>now</strong>, not in 3 months.</p>
+      <p>Insight Lite is the zero-friction launchpad to financial intelligence. It runs locally on your machine, boots in seconds, and delivers the answers you need without touching the cloud—or your privacy.</p>
+    </section>
 
+    <!-- Key Features Grid -->
+    <section>
+      <h2>What You Get</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>⚡ Local-First Architecture</h3>
+          <p>No logins. No latency. No cloud. Your data stays on your machine, always under your control.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔗 1-Click Bank Connection</h3>
+          <p>Secure, read-only sync in seconds. Connect once, stay informed forever. No manual data entry.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📊 Auto-Generated Reports</h3>
+          <p>Monthly P&L and cash flow summaries, ready out of the box. Professional-grade, zero configuration.</p>
+        </div>
+        <div class="feature-card">
+          <h3>💰 Cashflow Analysis</h3>
+          <p>Know exactly how long your cash will last. Burn rate, runway, and expense forecasting at a glance.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📄 PDF Exports</h3>
+          <p>Share clean, investor-ready snapshots with co-founders or investors. One click, polished output.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🎯 One-Click Insights</h3>
+          <p>Quick reports with zero dashboards to configure. Speed and clarity, nothing else.</p>
+        </div>
+      </div>
+    </section>
 
-<header class="hero">
-  <h1>Insight Hunter</h1>
-  <p>Your intelligence platform, delivered in the edition that fits your workflow.</p>
-</header>
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <h2>Why Teams Love Insight Lite</h2>
+      <div class="stat">
+        <span class="number">60s</span>
+        <span class="label">Financial Snapshot</span>
+      </div>
+      <div class="stat">
+        <span class="number">0</span>
+        <span class="label">Setup Required</span>
+      </div>
+      <div class="stat">
+        <span class="number">100%</span>
+        <span class="label">Private & Local</span>
+      </div>
+    </section>
 
-<section class="versions-grid">
-  <div class="card">
-    <h2>Full Edition</h2>
-    <p>The complete intelligence suite.</p>
-    <a class="btn" href="/full">Explore</a>
-  </div>
+    <!-- Real-World Use Case -->
+    <section style="margin: 2rem 0; background: #f0f8ff; padding: 2rem; border-radius: 8px;">
+      <h2>The Real Use Case</h2>
+      <p><strong>Scenario:</strong> You're a solo founder with a pitch meeting tomorrow morning. Your co-founder asks: "What's our runway? What's our monthly burn?"</p>
+      <p>With Insight Lite, you already know the answer. You pull up a clean, investor-ready snapshot in 60 seconds. No scrambling. No spreadsheets. No CFO required.</p>
+      <p style="margin-top: 1rem; color: #1a1a2e;"><strong>Result:</strong> You walk into that meeting confident, prepared, and credible.</p>
+    </section>
 
-  <div class="card">
-    <h2>Insight Scout</h2>
-    <p>Browser extension for research capture.</p>
-    <a class="btn" href="/scout">Explore</a>
-  </div>
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+      <h2>How Insight Lite Stacks Up</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Spreadsheets</th>
+            <th>Accounting Software</th>
+            <th>Insight Lite</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Setup Time</strong></td>
+            <td>Hours</td>
+            <td>Days</td>
+            <td><span class="check">Seconds</span></td>
+          </tr>
+          <tr>
+            <td><strong>Data Privacy</strong></td>
+            <td>Uncertain</td>
+            <td>Cloud-dependent</td>
+            <td><span class="check">100% Local</span></td>
+          </tr>
+          <tr>
+            <td><strong>Burn Rate Calculation</strong></td>
+            <td>Manual</td>
+            <td>Complex setup</td>
+            <td><span class="check">Automatic</span></td>
+          </tr>
+          <tr>
+            <td><strong>Cost</strong></td>
+            <td>Free (time sink)</td>
+            <td>$100–$500/mo</td>
+            <td><span class="check">Free</span></td>
+          </tr>
+          <tr>
+            <td><strong>PDF Reports</strong></td>
+            <td>Manual export</td>
+            <td>Limited formatting</td>
+            <td><span class="check">One-click professional</span></td>
+          </tr>
+          <tr>
+            <td><strong>Speed</strong></td>
+            <td>Slow</td>
+            <td>Moderate</td>
+            <td><span class="check">Instant</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-  <div class="card">
-    <h2>Insight Lite</h2>
-    <p>Fast, lightweight desktop companion.</p>
-    <a class="btn" href="/lite">Explore</a>
-  </div>
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+      <h2>What Founders Say</h2>
+      <div style="margin-bottom: 2rem;">
+        <p class="testimonial">"I was drowning in spreadsheets. Insight Lite gave me clarity in under a minute. Now I check my runway every Friday instead of dreading the math."</p>
+        <p class="testimonial-author">— Alex R., SaaS Founder</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <p class="testimonial">"No setup, no learning curve, no noise. This is exactly what indie hackers need. Highly recommend."</p>
+        <p class="testimonial-author">— Jordan S., Indie Developer</p>
+      </div>
+      <div>
+        <p class="testimonial">"We used this to prep for investor meetings. The PDF exports looked professional, and I knew our numbers cold. It made a real difference."</p>
+        <p class="testimonial-author">— Casey M., Freelance Founder</p>
+      </div>
+    </section>
 
-  <div class="card">
-    <h2>Business Forms</h2>
-    <p>Automated form workflows.</p>
-    <a class="btn" href="/forms">Explore</a>
-  </div>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is my data secure?</div>
+        <div class="faq-answer">Yes. Insight Lite runs entirely on your machine. Your data never leaves your computer. No cloud, no servers, no third-party access.</div>
+      </div>
 
-  <div class="card">
-    <h2>Standard Edition</h2>
-    <p>Balanced, everyday intelligence.</p>
-    <a class="btn" href="/standard">Explore</a>
-  </div>
-</section>
+      <div class="faq-item">
+        <div class="faq-question">Does it really only take 60 seconds?</div>
+        <div class="faq-answer">Once you connect your bank account, yes—financial snapshots generate in under a minute. No manual data entry, no configuration required.</div>
+      </div>
 
-<footer class="site-footer">
-  <p>© Insight Hunter — All Rights Reserved</p>
-</footer>
+      <div class="faq-item">
+        <div class="faq-question">What if I need more advanced features?</div>
+        <div class="faq-answer">Upgrade to Insight Standard for multi-account support, rolling forecasts, Slack alerts, and API access. Or stick with Lite if simplicity is what you need.</div>
+      </div>
 
+      <div class="faq-item">
+        <div class="faq-question">Will my data sync across devices?</div>
+        <div class="faq-answer">Insight Lite is local-first by design. You can export and share snapshots, but data stays on your primary machine. Upgrading to Standard adds cross-device sync.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What banks are supported?</div>
+        <div class="faq-answer">Insight Lite integrates with 12,000+ banks globally via Plaid. If your bank exists, we connect to it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is there a paid tier?</div>
+        <div class="faq-answer">Insight Lite is completely free. We offer Insight Standard and Insight Full for teams needing advanced features and cross-device access.</div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="cta-section">
+      <h2>Stop Guessing. Start Knowing.</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Download Insight Lite free today. No credit card. No setup. Just financial clarity.</p>
+      <a id="download-btn" class="cta-primary" href="#" style="background: #00d4ff; color: #1a1a2e; margin-right: 1rem;">Detecting your OS…</a>
+      <a href="/standard" class="btn-secondary">Upgrade to Standard →</a>
+    </section>
+
+    <!-- Trust Signals -->
+    <section style="text-align: center; margin: 2rem 0; padding: 2rem; background: #f9f9f9; border-radius: 8px;">
+      <h3>Trusted by Founders & Indie Hackers</h3>
+      <p style="color: #555; margin-bottom: 1rem;">Used by 5,000+ founders to make smarter financial decisions</p>
+      <p style="color: #999; font-size: 0.95rem;">💼 YC & Techstars backed | 🔒 Bank-level security | ⚡ Zero-friction setup</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Insight Hunter — Built in Georgia, trusted nationwide</p>
+    <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">
+      <a href="/privacy" style="color: #00d4ff; text-decoration: none;">Privacy</a> | 
+      <a href="/terms" style="color: #00d4ff; text-decoration: none;">Terms</a> | 
+      <a href="/contact" style="color: #00d4ff; text-decoration: none;">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    // OS Detection for Download Button
+    const downloadBtn = document.getElementById("download-btn");
+    const userAgent = navigator.userAgent.toLowerCase();
+    
+    if (userAgent.includes("mac")) {
+      downloadBtn.href = "/downloads/mac.dmg";
+      downloadBtn.innerText = "Download for macOS";
+    } else if (userAgent.includes("win")) {
+      downloadBtn.href = "/downloads/win.exe";
+      downloadBtn.innerText = "Download for Windows";
+    } else if (userAgent.includes("linux")) {
+      downloadBtn.href = "/downloads/linux.appimage";
+      downloadBtn.innerText = "Download for Linux";
+    } else {
+      downloadBtn.href = "/downloads/universal.zip";
+      downloadBtn.innerText = "Download (Universal)";
+    }
+
+    // FAQ Toggle
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+      const question = item.querySelector(".faq-question");
+      question.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
