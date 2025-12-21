@@ -1,1 +1,83 @@
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0b0d12;
+  color: #e6faff;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #00eaff;
+  text-shadow: 0 0 20px rgba(0, 234, 255, 0.4);
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0% { text-shadow: 0 0 20px rgba(0, 234, 255, 0.4); }
+  50% { text-shadow: 0 0 40px rgba(0, 234, 255, 0.8); }
+  100% { text-shadow: 0 0 20px rgba(0, 234, 255, 0.4); }
+}
+
+.versions-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+  background: #11141c;
+  border: 1px solid #1f2330;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.card h2 {
+  color: #00eaff;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: #00eaff;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header, .site-footer {
+  padding: 1.5rem 2rem;
+  background: #0f1218;
+  border-bottom: 1px solid #1f2330;
+  text-align: center;
+}
+
+.site-header a {
+  color: #00eaff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer {
+  border-top: 1px solid #1f2330;
+  margin-top: 4rem;
+  color: #6f7a8a;
+}
