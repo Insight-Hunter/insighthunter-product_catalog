@@ -1,66 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insight Lite — Instant Financial Clarity</title>
-  <meta name="description" content="Insight Hunter Lite gives solo founders and small teams instant visibility into cash flow, burn rate, and runway. Fast, lightweight desktop companion — no setup required." />
+  <title>Insight Lite — Fast, Local-First Financial Clarity</title>
+  <meta name="description" content="Insight Lite is your zero-friction launchpad to financial intelligence. Local-first, instant, and spreadsheet-free." />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <a href="/" class="logo">Insight Hunter</a>
     <nav>
-      <a href="/bizforma">BizForma</a>
+      <a href="/full">Full</a>
       <a href="/scout">Scout</a>
       <a href="/lite">Lite</a>
+      <a href="/forms">Forms</a>
       <a href="/standard">Standard</a>
-      <a href="/full">Full</a>
     </nav>
   </header>
 
-  <header class="hero">
-    <h1>Insight Lite</h1>
-    <p>Fast, lightweight desktop companion. Instant financial clarity — no spreadsheets required.</p>
-  </header>
-
   <main class="content" style="padding:2rem;max-width:800px;margin:auto;">
-    <h2>Overview</h2>
-    <p>Single-file, instant startup. Your always-on financial assistant for solo founders, freelancers, and lean teams.</p>
+    <h1>Insight Lite</h1>
+    <p class="tagline">The fastest way to financial clarity — no spreadsheets, no setup, no noise.</p>
+
+    <p>Insight Lite is your zero-friction launchpad to financial intelligence. Designed for solo founders, indie hackers, and lean operators, it runs locally, boots instantly, and delivers crystal-clear insights without touching the cloud.</p>
 
     <h2>What You Get</h2>
     <ul>
-      <li>Local-first architecture</li>
-      <li>1-click bank connection — securely link your primary account in seconds</li>
-      <li>Auto-generated reports — monthly P&L and cash flow summaries, no setup needed</li>
-      <li>Burn rate + runway calculator — know exactly how long your cash will last</li>
-      <li>PDF exports — share clean summaries with investors or co-founders</li>
-      <li>Quick reports</li>
-      <li>Minimal neon UI</li>
+      <li><strong>Local-first architecture:</strong> No logins, no latency — your data stays on your machine</li>
+      <li><strong>1-click bank connection:</strong> Secure, read-only sync in seconds</li>
+      <li><strong>Auto-generated reports:</strong> Monthly P&L and cash flow summaries, ready out of the box</li>
+      <li><strong>Cashflow analysis and cash usage:</strong> Know exactly how long your cash will last</li>
+      <li><strong>PDF exports:</strong> Share clean, investor-ready snapshots with a click</li>
+      <li><strong>Quick reports:</strong> One-click insights, no dashboards to configure</li>
+      <li><strong>Minimal neon UI:</strong> Built for speed, clarity, and focus</li>
     </ul>
 
     <h2>Use Case</h2>
-    <p>You're a solo founder prepping for a pitch. You need to show your burn rate and runway — fast. Insight Lite gives you a clean, exportable snapshot in seconds.</p>
+    <p>You're a solo founder with a demo tomorrow. You need to show your burn rate, runway, and cash flow — fast. Insight Lite gives you a clean, exportable snapshot in under 60 seconds. No setup. No noise. Just answers.</p>
 
     <p>
       <a id="download-btn" class="btn" href="#">Detecting your OS…</a>
     </p>
-
-    <script>
-      const btn = document.getElementById("download-btn");
-      const p = navigator.platform.toLowerCase();
-      if (p.includes("mac")) { 
-        btn.href = "/downloads/mac.dmg"; 
-        btn.innerText = "Download for macOS"; 
-      } else if (p.includes("win")) { 
-        btn.href = "/downloads/win.exe"; 
-        btn.innerText = "Download for Windows"; 
-      } else { 
-        btn.href = "/downloads/universal.zip"; 
-        btn.innerText = "Download (Universal)"; 
-      }
-    </script>
 
     <p>
       <a class="btn" href="/standard">Upgrade to Standard</a>
@@ -71,5 +52,22 @@
   <footer class="site-footer">
     <p>© Insight Hunter — Built in Georgia, trusted nationwide</p>
   </footer>
+
+  <script>
+    const btn = document.getElementById("download-btn");
+    const p = navigator.platform.toLowerCase();
+    if (p.includes("mac")) { 
+      btn.href = "/downloads/mac.dmg"; 
+      btn.innerText = "Download for macOS"; 
+    } else if (p.includes("win")) { 
+      btn.href = "/downloads/win.exe"; 
+      btn.innerText = "Download for Windows"; 
+    } else { 
+      btn.href = "/downloads/universal.zip"; 
+      btn.innerText = "Download (Universal)"; 
+    }
+  </script>
 </body>
 </html>
+
+ 
