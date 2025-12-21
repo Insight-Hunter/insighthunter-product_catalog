@@ -1,59 +1,75 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insight Lite</title>
+  <title>Insight Lite — Instant Financial Clarity</title>
+  <meta name="description" content="Insight Hunter Lite gives solo founders and small teams instant visibility into cash flow, burn rate, and runway. Fast, lightweight desktop companion — no setup required." />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a href="/" class="logo">Insight Hunter</a>
+    <nav>
+      <a href="/bizforma">BizForma</a>
+      <a href="/scout">Scout</a>
+      <a href="/lite">Lite</a>
+      <a href="/standard">Standard</a>
+      <a href="/full">Full</a>
+    </nav>
+  </header>
 
+  <header class="hero">
+    <h1>Insight Lite</h1>
+    <p>Fast, lightweight desktop companion. Instant financial clarity — no spreadsheets required.</p>
+  </header>
 
-<header class="site-header">
-  <a href="/" class="logo">Insight Hunter</a>
-  <nav>
-    <a href="/full">Full</a>
-    <a href="/fAFP">FAFP</a>
-    <a href="/lite">Lite</a>
-    <a href="/forms">Forms</a>
-    <a href="/standard">Standard</a>
-  </nav>
-</header>
+  <main class="content" style="padding:2rem;max-width:800px;margin:auto;">
+    <h2>Overview</h2>
+    <p>Single-file, instant startup. Your always-on financial assistant for solo founders, freelancers, and lean teams.</p>
 
+    <h2>What You Get</h2>
+    <ul>
+      <li>Local-first architecture</li>
+      <li>1-click bank connection — securely link your primary account in seconds</li>
+      <li>Auto-generated reports — monthly P&L and cash flow summaries, no setup needed</li>
+      <li>Burn rate + runway calculator — know exactly how long your cash will last</li>
+      <li>PDF exports — share clean summaries with investors or co-founders</li>
+      <li>Quick reports</li>
+      <li>Minimal neon UI</li>
+    </ul>
 
-<header class="hero">
-  <h1>Insight Lite</h1>
-  <p>Fast, lightweight desktop companion.</p>
-</header>
+    <h2>Use Case</h2>
+    <p>You're a solo founder prepping for a pitch. You need to show your burn rate and runway — fast. Insight Lite gives you a clean, exportable snapshot in seconds.</p>
 
-<section class="content" style="padding:2rem;max-width:800px;margin:auto;">
+    <p>
+      <a id="download-btn" class="btn" href="#">Detecting your OS…</a>
+    </p>
 
-  <h2>Overview</h2>
-  <p>Single-file, instant startup.</p>
-  <h2>Features</h2>
-  <ul>
-    <li>Local-first</li>
-    <li>Quick reports</li>
-    <li>Minimal neon UI</li>
-  </ul>
+    <script>
+      const btn = document.getElementById("download-btn");
+      const p = navigator.platform.toLowerCase();
+      if (p.includes("mac")) { 
+        btn.href = "/downloads/mac.dmg"; 
+        btn.innerText = "Download for macOS"; 
+      } else if (p.includes("win")) { 
+        btn.href = "/downloads/win.exe"; 
+        btn.innerText = "Download for Windows"; 
+      } else { 
+        btn.href = "/downloads/universal.zip"; 
+        btn.innerText = "Download (Universal)"; 
+      }
+    </script>
 
-  <a id="download-btn" class="btn" href="#">Detecting your OS…</a>
+    <p>
+      <a class="btn" href="/standard">Upgrade to Standard</a>
+      <a class="btn" href="/">← Back to Versions Hub</a>
+    </p>
+  </main>
 
-  <script>
-    const btn = document.getElementById("download-btn");
-    const p = navigator.platform.toLowerCase();
-    if (p.includes("mac")) { btn.href="/downloads/mac.dmg"; btn.innerText="Download for macOS"; }
-    else if (p.includes("win")) { btn.href="/downloads/win.exe"; btn.innerText="Download for Windows"; }
-    else { btn.href="/downloads/universal.zip"; btn.innerText="Download (Universal)"; }
-  </script>
-
-  <a class="btn" href="/">← Back to Versions Hub</a>
-</section>
-
-<footer class="site-footer">
-  <p>© Insight Hunter — All Rights Reserved</p>
-</footer>
-
+  <footer class="site-footer">
+    <p>© Insight Hunter — Built in Georgia, trusted nationwide</p>
+  </footer>
 </body>
 </html>
