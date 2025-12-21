@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BizForms — Automated Business Forms by Insight Hunter</title>
+  <meta name="description" content="BizForms turns messy paperwork into clean, automated workflows for finance and operations teams." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .hero {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+    }
+    .hero h1 { margin-bottom: 0.5rem; }
+    .hero p { margin: 0; color: #555; }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+      opacity: 0;
+      transform: translateY(10px);
+      animation: cardFadeUp 0.45s ease-out forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.02s; }
+    .card:nth-child(2) { animation-delay: 0.08s; }
+    .card:nth-child(3) { animation-delay: 0.14s; }
+    .card:nth-child(4) { animation-delay: 0.20s; }
+
+    .card h2 { margin-top: 0; margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .card ul { margin: 0 0 0 1.1rem; padding: 0; font-size: 0.95rem; color: #555; }
+    .card li { margin-bottom: 0.35rem; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+      background: #00a6ff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn:hover {
+      background: #0086cc;
+      box-shadow: 0 8px 18px rgba(0, 134, 204, 0.35);
+    }
+
+    @keyframes cardFadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="logo">Insight Hunter</a>
+    <nav>
+      <a href="/bizforms/">BizForms</a>
+      <a href="/scout/">Scout</a>
+      <a href="/lite/">Lite</a>
+      <a href="/standard/">Standard</a>
+      <a href="/full/">Full</a>
+    </nav>
+  </header>
+
+  <header class="hero">
+    <h1>BizForms</h1>
+    <p>Turn scattered forms into clean, automated workflows.</p>
+  </header>
+
+  <main class="content">
+    <p>BizForms is the forms engine for modern finance and operations teams. Replace ad‑hoc PDFs, email attachments, and spreadsheets with structured, automated flows your team actually follows.</p>
+
+    <section class="feature-grid">
+      <div class="card">
+        <h2>Finance Forms That Behave</h2>
+        <ul>
+          <li>Engagement letters, intake, and onboarding forms</li>
+          <li>Reimbursement, approval, and request workflows</li>
+          <li>Standardized data flowing into your core systems</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Automation Built In</h2>
+        <ul>
+          <li>Automatic routing to the right reviewer</li>
+          <li>Reminders when forms stall or go quiet</li>
+          <li>Status visibility so nothing gets lost</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Centralized Storage</h2>
+        <ul>
+          <li>One place for signed forms and attachments</li>
+          <li>Searchable history for audits and reviews</li>
+          <li>Consistent naming and structure by default</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Built for Small Teams</h2>
+        <ul>
+          <li>Simple contributor access controls</li>
+          <li>No giant “workflow projects” to set up</li>
+          <li>Go from idea to live form in minutes</li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="btn" href="/">← Back to Versions Hub</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Insight Hunter — All Rights Reserved</p>
+  </footer>
+</body>
+</html>
