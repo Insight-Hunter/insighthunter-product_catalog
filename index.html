@@ -29,14 +29,15 @@
     }
 
     .card {
-      background: #ffffff;
+      background: rgba(128, 128, 128, 0.3); /* Semi-transparent gray */
       border-radius: 12px;
       padding: 1.75rem 1.5rem;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* More dramatic shadow */
+      border: 1px solid rgba(0, 0, 0, 0.08);
       transform: translateY(10px);
       opacity: 0;
       animation: cardFadeUp 0.45s ease-out forwards;
+      text-align: center; /* Center everything inside card */
     }
 
     .card:nth-child(1) { animation-delay: 0.02s; }
@@ -49,6 +50,7 @@
       margin-top: 0;
       margin-bottom: 0.5rem;
       font-size: 1.1rem;
+      color: black; /* Black font for titles */
     }
 
     .card p.lead {
@@ -73,27 +75,14 @@
       padding: 0.6rem 1.3rem;
       border-radius: 6px;
       background: #00a6ff;
-      color: #fff;
+      color: white;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
-    }
-
-    .card .btn:hover {
-      background: #0086cc;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(0, 134, 204, 0.35);
-    }
-
-    @keyframes cardFadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card-logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 900px) {
@@ -130,6 +119,7 @@
   <section class="versions-grid">
     <!-- 1. Business Forms / BizForms -->
     <div class="card">
+      <img src="/assets/bizforms-logo.png" alt="BizForms" class="card-logo">
       <h2>BizForms</h2>
       <p class="lead">Turn messy paperwork into clean, automated workflows.</p>
       <ul>
@@ -144,6 +134,7 @@
 
     <!-- 2. Scout -->
     <div class="card">
+      <img src="/assets/scout-logo.png" alt="Scout" class="card-logo">
       <h2>Scout</h2>
       <p class="lead">Fast, focused financial scouting for “what-if” questions.</p>
       <ul>
@@ -158,6 +149,7 @@
 
     <!-- 3. Lite -->
     <div class="card">
+      <img src="/assets/lite-logo.png" alt="Lite" class="card-logo">
       <h2>Lite</h2>
       <p class="lead">Local‑first, zero‑friction desktop clarity in under 60 seconds.</p>
       <ul>
@@ -172,6 +164,7 @@
 
     <!-- 4. Standard -->
     <div class="card">
+      <img src="/assets/standard-logo.png" alt="Standard" class="card-logo">
       <h2>Standard</h2>
       <p class="lead">Everyday finance intelligence for growing teams.</p>
       <ul>
@@ -186,6 +179,7 @@
 
     <!-- 5. Full -->
     <div class="card">
+      <img src="/assets/full-logo.png" alt="Full" class="card-logo">
       <h2>Full</h2>
       <p class="lead">The complete command center for finance‑heavy teams.</p>
       <ul>
