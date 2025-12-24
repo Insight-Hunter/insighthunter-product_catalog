@@ -1,0 +1,21 @@
+// Variables for neon theme
+$bg-primary: #0a0a2a;
+$bg-card: linear-gradient(135deg, #1a1a4a, #0f0f3a);
+$cyan: #00ffff;
+$pink: #ff69b4;
+$green-check: #00ff00;
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: $bg-primary;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Add all previous SCSS rules here: hero, tiers-grid, tier-card, etc. */
