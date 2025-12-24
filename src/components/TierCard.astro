@@ -1,14 +1,23 @@
 ---
 interface Props {
-  name: string; price: string; description: string; features: string;
-  ctaText: string; ctaHref: string; recommended?: boolean;
+  name: string;
+  price: string;
+  subtitle?: string;
+  users?: string;
+  features: string[]; /* Change to array for list */
+  ctaText: string;
+  ctaHref: string;
+  recommended?: boolean;
 }
-const { name, price, description, features, ctaText, ctaHref, recommended = false } = Astro.props;
+const { name, price, subtitle, users, features, ctaText, ctaHref, recommended = false } = Astro.props;
 ---
 <div class={`tier-card ${recommended ? 'recommended' : ''}`}>
   <h2 class="tier-name">{name}</h2>
+  {subtitle && <p class="subtitle">{subtitle}</p>}
   <p class="price">{price}</p>
-  <p class="description">{description}</p>
-  <p class="features">{features}</p>
+  {users && <p class="users">{users}</p>}
+  <ul class="feature-list">
+    {features.map(feature => <li>{feature}</li>)}
+  </ul>
   <a href={ctaHref} class="cta">{ctaText}</a>
 </div>
