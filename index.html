@@ -1,207 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insight Hunter — Versions Hub</title>
-  <meta name="description" content="Choose the Insight Hunter edition that fits your workflow: BizForms, Scout, Lite, Standard, or Full." />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  <style>
-    .hero {
-      text-align: center;
-      padding: 3rem 1.5rem 2rem;
-    }
-    .hero h1 {
-      margin-bottom: 0.5rem;
-    }
-    .hero p {
-      margin: 0;
-      color: #555;
-    }
-
-    .versions-grid {
-      max-width: 1100px;
-      margin: 2rem auto 3rem;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: rgba(128, 128, 128, 0.3); /* Semi-transparent gray */
-      border-radius: 12px;
-      padding: 1.75rem 1.5rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* More dramatic shadow */
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      transform: translateY(10px);
-      opacity: 0;
-      animation: cardFadeUp 0.45s ease-out forwards;
-      text-align: center; /* Center everything inside card */
-    }
-
-    .card:nth-child(1) { animation-delay: 0.02s; }
-    .card:nth-child(2) { animation-delay: 0.08s; }
-    .card:nth-child(3) { animation-delay: 0.14s; }
-    .card:nth-child(4) { animation-delay: 0.20s; }
-    .card:nth-child(5) { animation-delay: 0.26s; }
-
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      color: black; /* Black font for titles */
-    }
-
-    .card p.lead {
-      margin: 0 0 0.75rem;
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    .card ul {
-      margin: 0 0 1rem 1.1rem;
-      padding: 0;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .card li {
-      margin-bottom: 0.35rem;
-    }
-
-    .card .btn {
-      display: inline-block;
-      padding: 0.6rem 1.3rem;
-      border-radius: 6px;
-      background: #00a6ff;
-      color: white;
-      text-decoration: none;
-    }
-
-    .card-logo {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .versions-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .versions-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Hunter — Finance Intelligence for Teams</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #0a0a2a; color: #ffffff; margin: 0; padding: 0; }
+        .hero { position: relative; text-align: center; color: #ffffff; }
+        .hero img { width: 100%; max-height: 600px; object-fit: cover; }
+        .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .hero-text h1 { font-size: 3em; color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+        .hero-text p { font-size: 1.5em; color: #ff69b4; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h2 { color: #00ffff; }
+        .tiers { display: flex; justify-content: space-between; }
+        .tier { flex: 1; margin: 10px; padding: 20px; background-color: #1a1a4a; border-radius: 10px; }
+        .tier h3 { color: #ff69b4; }
+        .price { font-size: 1.2em; color: #00ff00; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        .cta { display: inline-block; padding: 10px 20px; background-color: #ff69b4; color: #ffffff; text-decoration: none; border-radius: 5px; }
+        .cta:hover { background-color: #ff1493; }
+        footer { text-align: center; padding: 20px; border-top: 1px solid #00ffff; }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <a href="/" class="logo">Insight Hunter</a>
-    <nav>
-      <!-- Menu order matches card order -->
-      <a href="/bizforms/">BizForms</a>
-      <a href="/scout/">Scout</a>
-      <a href="/lite/">Lite</a>
-      <a href="/standard/">Standard</a>
-      <a href="/full/">Full</a>
-    </nav>
-  </header>
+    <section class="hero">
+        <img src="insight-hunter-ai-hero.png" alt="Insight Hunter AI Robot">
+        <div class="hero-text">
+            <h1>Insight Hunter</h1>
+            <p>Ask your numbers anything. Get instant answers, forecasts, and insights with natural language queries — no dashboards required.</p>
+        </div>
+    </section>
 
-  <header class="hero">
-    <h1>Insight Hunter</h1>
-    <p>Pick the edition that matches how you actually work.</p>
-  </header>
+    <div class="container">
+        <h2>Pick the Edition That Matches How You Work</h2>
+        <div class="tiers">
+            <div class="tier">
+                <h3>Lite</h3>
+                <p class="price">Free</p>
+                <p>Local-first, zero-friction desktop clarity in under 60 seconds.</p>
+                <ul>
+                    <li>Runs on your machine—no logins, no cloud</li>
+                    <li>1-click bank connection (read-only)</li>
+                    <li>Auto P&L and cash flow snapshots</li>
+                    <li>Burn rate and runway at a glance</li>
+                    <li>One-click PDF exports for investors</li>
+                </ul>
+                <a href="/lite/index.html" class="cta">Open Lite</a>
+            </div>
+            <div class="tier">
+                <h3>Standard</h3>
+                <p class="price">$$ (e.g., $49/month)</p>
+                <p>Everyday finance intelligence for growing teams.</p>
+                <ul>
+                    <li>Multi-account and multi-entity support</li>
+                    <li>Rolling 12-month forecasts and trends</li>
+                    <li>Investor-ready dashboards and metrics</li>
+                    <li>Email alerts when burn or runway shifts</li>
+                    <li>Exports for your CPA, board, and investors</li>
+                </ul>
+                <a href="/standard/index.html" class="cta">Open Standard</a>
+            </div>
+            <div class="tier">
+                <h3>Full Enterprise AFP</h3>
+                <p class="price">$$$ (e.g., $199/month or custom)</p>
+                <p>The complete command center for finance-heavy teams.</p>
+                <ul>
+                    <li>All Standard + Scout features in one place</li>
+                    <li>Team access with roles and permissions</li>
+                    <li>Audit logs and activity history for compliance</li>
+                    <li>Advanced automations and workflows</li>
+                    <li>Priority support and guided onboarding</li>
+                </ul>
+                <a href="/full/index.html" class="cta">Open Full</a>
+            </div>
+        </div>
 
-  <section class="versions-grid">
+        <h2>Showcased Apps</h2>
+        <div class="tiers">
+            <div class="tier">
+                <h3>Insight Scout</h3>
+                <p>Fast, focused financial scouting for “what-if” questions.</p>
+                <ul>
+                    <li>Rapid scenarios on revenue, burn, and hiring</li>
+                    <li>Side-by-side views of best, base, and worst case</li>
+                    <li>Save and share scenarios with advisors and investors</li>
+                    <li>No heavy modeling—just quick, clear answers</li>
+                    <li>Ideal for founders making weekly decisions</li>
+                </ul>
+                <a href="/scout/index.html" class="cta">Open Scout</a>
+            </div>
+            <div class="tier">
+                <h3>BizForms</h3>
+                <p>Turn messy paperwork into clean, automated workflows.</p>
+                <ul>
+                    <li>Finance & ops form templates that teams actually use</li>
+                    <li>Automated routing, approvals, and reminders</li>
+                    <li>Centralized storage for receipts, contracts, and docs</li>
+                    <li>Consistent, export-ready data for your systems</li>
+                    <li>Perfect for engagement letters, intake, and checklists</li>
+                </ul>
+                <a href="/bizforms/index.html" class="cta">Open BizForms</a>
+            </div>
+        </div>
 
-    <!-- 3. Lite -->
-    <div class="card">
-      <img src="/assets/lite-logo.png" alt="Lite" class="card-logo">
-      <h2>Lite</h2>
-      <p class="lead">Local‑first, zero‑friction desktop clarity in under 60 seconds.</p>
-      <ul>
-        <li>Runs on your machine—no logins, no cloud</li>
-        <li>1‑click bank connection (read‑only)</li>
-        <li>Auto P&L and cash flow snapshots</li>
-        <li>Burn rate and runway at a glance</li>
-        <li>One‑click PDF exports for investors</li>
-      </ul>
-      <a class="btn" href="/lite/index.html">Open Lite</a>
+        <h2>Insight Hunter AI — Coming Soon</h2>
+        <p>Ask your numbers anything with natural language queries.</p>
+        <a href="/ai.html" class="cta">Preview</a>
     </div>
 
-    <!-- 4. Standard -->
-    <div class="card">
-      <img src="/assets/standard-logo.png" alt="Standard" class="card-logo">
-      <h2>Standard</h2>
-      <p class="lead">Everyday finance intelligence for growing teams.</p>
-      <ul>
-        <li>Multi‑account and multi‑entity support</li>
-        <li>Rolling 12‑month forecasts and trends</li>
-        <li>Investor‑ready dashboards and metrics</li>
-        <li>Email alerts when burn or runway shifts</li>
-        <li>Exports for your CPA, board, and investors</li>
-      </ul>
-      <a class="btn" href="/standard/index.html">Open Standard</a>
-    </div>
-
-    <!-- 5. Full -->
-    <div class="card">
-      <img src="/assets/full-logo.png" alt="Full" class="card-logo">
-      <h2>Full</h2>
-      <p class="lead">The complete command center for finance‑heavy teams.</p>
-      <ul>
-        <li>All Standard + Scout features in one place</li>
-        <li>Team access with roles and permissions</li>
-        <li>Audit logs and activity history for compliance</li>
-        <li>Advanced automations and workflows</li>
-        <li>Priority support and guided onboarding</li>
-      </ul>
-      <a class="btn" href="/full/index.html">Open Full</a>
-    </div>
-        <!-- 1. Business Forms / BizForms -->
-    <div class="card">
-      <img src="/assets/bizforms-logo.png" alt="BizForms" class="card-logo">
-      <h2>BizForms</h2>
-      <p class="lead">Turn messy paperwork into clean, automated workflows.</p>
-      <ul>
-        <li>Finance & ops form templates that teams actually use</li>
-        <li>Automated routing, approvals, and reminders</li>
-        <li>Centralized storage for receipts, contracts, and docs</li>
-        <li>Consistent, export-ready data for your systems</li>
-        <li>Perfect for engagement letters, intake, and checklists</li>
-      </ul>
-      <a class="btn" href="/bizforms/index.html">Open BizForms</a>
-    </div>
-
-    <!-- 2. Scout -->
-    <div class="card">
-      <img src="/assets/scout-logo.png" alt="Scout" class="card-logo">
-      <h2>Scout</h2>
-      <p class="lead">Fast, focused financial scouting for “what-if” questions.</p>
-      <ul>
-        <li>Rapid scenarios on revenue, burn, and hiring</li>
-        <li>Side‑by‑side views of best, base, and worst case</li>
-        <li>Save and share scenarios with advisors and investors</li>
-        <li>No heavy modeling—just quick, clear answers</li>
-        <li>Ideal for founders making weekly decisions</li>
-      </ul>
-      <a class="btn" href="/scout/index.html">Open Scout</a>
-    </div>
-    <div class="edition-card ai">
-  <h3>Insight Hunter AI</h3>
-  <p>Ask your numbers anything — coming soon.</p>
-  <a href="/ai.html" class="btn">Preview</a>
-</div>
-
-
-  </section>
-
-  <footer class="site-footer">
-    <p>© Insight Hunter — All Rights Reserved</p>
-  </footer>
+    <footer>
+        <p>Explore our product catalog on GitHub: <a href="https://github.com/Insight-Hunter/insighthunter-product_catalog" style="color: #00ffff;">Insight-Hunter/insighthunter-product_catalog</a></p>
+        <p>Repo folders grouped by product: /lite, /standard, /full-enterprise-afp, /scout, /bizforms (add these for organized documentation).</p>
+        <p>&copy; 2025 Insight Hunter</p>
+    </footer>
 </body>
 </html>
