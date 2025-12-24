@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: string;
+  price: string;
+  description: string;
+  features: string;
+  ctaText: string;
+  ctaHref: string;
+  recommended?: boolean;
+}
+
+const { name, price, description, features, ctaText, ctaHref, recommended = false } = Astro.props;
+---
+<div class={`tier-card ${recommended ? 'recommended' : ''}`}>
+  <h2 class="tier-name">{name}</h2>
+  <p class="price">{price}</p>
+  <p class="description">{description}</p>
+  <p class="features">{features}</p>
+  <a href={ctaHref} class="cta">{ctaText}</a>
+</div>
