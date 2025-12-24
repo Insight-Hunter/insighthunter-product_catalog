@@ -1,149 +1,55 @@
-$bg-primary: #0a0a2a;
-$bg-card: linear-gradient(135deg, #1a1a4a, #0f0f3a);
-$cyan: #00ffff;
-$pink: #ff69b4;
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Arial, sans-serif;
-  background: $bg-primary;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
-}
-.hero-overlay h1 {
-  font-size: 2.8rem;
-  color: $cyan;
-  text-shadow: 0 0 20px $cyan;
-  margin: 0 0 16px;
-}
-.hero-overlay p {
-  font-size: 1.4rem;
-  color: $pink;
-  margin: 0;
-}
-
-/* Tiers */
-.tiers-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  margin: 60px 0;
-}
+/* Enhanced Tier Cards */
 .tier-card {
-  background: $bg-card;
-  border-radius: 20px;
-  padding: 40px 24px;
+  background: linear-gradient(135deg, rgba(26,26,74,0.9), rgba(15,15,58,0.9)); /* Base dark gradient */
+  border-radius: 24px;
+  padding: 48px 32px;
   text-align: center;
-  border: 1px solid rgba(0,255,255,.2);
-  transition: transform .3s ease, box-shadow .3s ease;
+  border: 1px solid rgba(0,255,255,.3);
   position: relative;
+  overflow: hidden;
+
   &.recommended {
-    border: 2px solid $pink;
+    background: linear-gradient(135deg, rgba(102,51,153,0.8), rgba(75,0,130,0.9)); /* Purple gradient for emphasis */
+    transform: scale(1.05);
+    z-index: 1;
     &::before {
-      content: 'Recommended';
+      content: 'Popular';
       position: absolute;
-      top: -12px;
-      right: 24px;
+      top: 16px;
+      right: -40px;
       background: $pink;
-      padding: 8px 24px;
-      border-radius: 30px;
-      font-size: .9rem;
+      color: #000;
+      padding: 8px 48px;
+      font-weight: bold;
+      transform: rotate(45deg);
       box-shadow: 0 0 15px $pink;
     }
   }
-  &:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 24px 48px rgba(0,255,255,.3);
-  }
-}
-.tier-name { font-size: 2rem; color: $pink; margin: 0 0 16px; }
-.price { font-size: 2.8rem; color: $cyan; margin: 20px 0; }
-.description { font-size: 1.2rem; margin-bottom: 20px; }
-.features { font-size: 1rem; margin: 24px 0; }
-.cta {
-  display: block;
-  width: 80%;
-  max-width: 300px;
-  margin: 32px auto 0;
-  padding: 16px;
-  background: $pink;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: all .3s;
-  &:hover { background: darken($pink, 10%); transform: scale(1.05); }
 }
 
-/* Feature Blocks */
-.feature-block {
-  margin: 80px 0;
+/* Feature List with Checkmarks */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  text-align: left;
+}
+.feature-list li {
+  margin: 12px 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  text-align: center;
-  &.reverse { flex-direction: column-reverse; }
+  font-size: 1rem;
 }
-.feature-image {
-  width: 100%;
-  max-width: 700px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.5);
-}
-.feature-title { font-size: 1.8rem; color: $cyan; margin-bottom: 16px; }
-
-/* CTA Final */
-.cta-final {
-  text-align: center;
-  padding: 80px 20px;
-}
-.cta-final .cta-title { font-size: 2rem; color: $cyan; }
-.cta.primary {
-  display: inline-block;
-  font-size: 1.4rem;
-  padding: 20px 40px;
-  background: $pink;
-  border-radius: 50px;
-  margin-top: 40px;
+.feature-list li::before {
+  content: '✓';
+  color: $cyan;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.2rem;
 }
 
-/* Responsive Mobile Refinements */
-@media (min-width: 768px) {
-  .hero-overlay h1 { font-size: 4rem; }
-  .hero-overlay p { font-size: 1.8rem; }
-  .tiers-grid { grid-template-columns: repeat(2, 1fr); }
-  .feature-block { flex-direction: row; text-align: left; }
-  .feature-block.reverse { flex-direction: row-reverse; }
-}
+/* Responsive Adjustments */
 @media (min-width: 1024px) {
-  .tiers-grid { grid-template-columns: repeat(3, 1fr); }
+  .tiers-grid { justify-content: center; }
+  .tier-card.recommended { margin-top: -20px; }
 }
