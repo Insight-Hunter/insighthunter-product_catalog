@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout title="Shop - Insight Hunter">
+  <Hero />
+  <section class="container">
+    <p style="font-size:2rem; margin:60px 0 32px;">Purchase and Download Insight Hunter Apps</p>
+    <p>Browse our products below. Add to cart and complete purchase for instant access or downloads. Lite is free with direct download. Standard and Full include subscription options with digital delivery.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px; margin:60px 0;">
+      <div>
+        <p>Lite - Free</p>
+        <button class="snipcart-add-item" data-item-id="lite" data-item-price="0.00" data-item-name="Insight Hunter Lite" data-item-description="Zero-friction local financial tool.">Download Free</button>
+      </div>
+      <div>
+        <p>Standard - $49/month</p>
+        <button class="snipcart-add-item" data-item-id="standard" data-item-price="49.00" data-item-name="Insight Hunter Standard" data-item-description="Forecasts for growing teams." data-item-recurring="monthly">Add to Cart</button>
+      </div>
+      <div>
+        <p>Full Enterprise - Custom</p>
+        <a href="/contact" class="cta">Contact for Pricing</a>
+      </div>
+    </div>
+    <p>For product details, visit individual landing pages. Company info in about. Questions in FAQs.</p>
+  </section>
+</Layout>
