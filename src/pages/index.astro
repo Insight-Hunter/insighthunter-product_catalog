@@ -2,44 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import TierCard from '../components/TierCard.astro';
-import FeatureBlock from '../components/FeatureBlock.astro';
-import CtaFinal from '../components/CtaFinal.astro';
 ---
-<Layout title="Insight Hunter — Financial Clarity, Without Compromise">
+<Layout title="Insight Hunter">
   <Hero />
-
   <section class="pricing container">
     <div class="tiers-grid">
-      <TierCard
-        name="Lite"
-        price="Free"
-        description="Instant cash insights and runway calculations with zero setup required."
-        features="Local-first architecture delivers immediate P&L snapshots, burn rate tracking, and one-click PDF exports tailored for solo founders and lean operators."
-        ctaText="Open Lite"
-        ctaHref="/lite"
-      />
-
-      <TierCard
-        name="Standard"
-        price="$49/month"
-        description="Everyday financial intelligence designed for growing teams."
-        features="Multi-entity support, rolling forecasts, investor-ready dashboards, and automated alerts provide the clarity needed to manage operations confidently."
-        ctaText="Open Standard"
-        ctaHref="/standard"
-      />
-
-      <TierCard
-        name="Full Enterprise"
-        price="Custom"
-        description="GAAP-aligned, AI-powered command center for finance-heavy organisations."
-        features="All Standard capabilities plus role-based team access, comprehensive audit trails, autonomous decision engines, and priority onboarding ensure complete control and compliance."
-        ctaText="Contact for Quote"
-        ctaHref="/contact"
-        recommended
-      />
+      <TierCard name="Lite" price="Free" description="Zero-friction local insights for solo operators." features="Instant bank connection, runway calculator, PDF exports." ctaText="Open Lite" ctaHref="/lite" />
+      <TierCard name="Standard" price="$49/month" description="Forecasts and alerts for growing teams." features="Multi-entity, rolling forecasts, investor dashboards." ctaText="Open Standard" ctaHref="/standard" />
+      <TierCard name="Full Enterprise" price="Custom" description="GAAP-aligned autonomous finance platform." features="Role-based teams, audit trails, AI execution." ctaText="Contact for Quote" ctaHref="/full" recommended />
     </div>
   </section>
-
-  <!-- Feature blocks and CTA similarly imported and used -->
-
+  <p style="margin-top:60px;">Explore dedicated pages: <a href="/lite">Lite</a> · <a href="/standard">Standard</a> · <a href="/full">Full</a> · <a href="/scout">Scout</a></p>
 </Layout>
