@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  reverse?: boolean;
+  link?: string;
+  linkText?: string;
+}
+const { title, text, image, alt, reverse = false, link, linkText } = Astro.props;
+---
+<div class={`feature-block ${reverse ? 'reverse' : ''}`}>
+  <div>
+    <p class="feature-title">{title}</p>
+    <p>{text}</p>
+    {link && <a href={link} target="_blank" rel="noopener" class="cta">{linkText}</a>}
+  </div>
+  <img src={image} alt={alt} class="feature-image">
+</div>
