@@ -2,15 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import TierCard from '../components/TierCard.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
+import CtaFinal from '../components/CtaFinal.astro';
 ---
 <Layout title="Insight Hunter">
   <Hero />
+
   <section class="pricing container">
     <div class="tiers-grid">
       <TierCard name="Lite" price="Free" description="Zero-friction local insights for solo operators." features="Instant bank connection, runway calculator, PDF exports." ctaText="Open Lite" ctaHref="/lite" />
-      <TierCard name="Standard" price="$49/month" description="Forecasts and alerts for growing teams." features="Multi-entity, rolling forecasts, investor dashboards." ctaText="Open Standard" ctaHref="/standard" />
+      <TierCard name="Standard" price="$49/month" description="Forecasts and alerts for growing teams." features="Multi-entity support, rolling forecasts, investor dashboards." ctaText="Open Standard" ctaHref="/standard" />
       <TierCard name="Full Enterprise" price="Custom" description="GAAP-aligned autonomous finance platform." features="Role-based teams, audit trails, AI execution." ctaText="Contact for Quote" ctaHref="/full" recommended />
     </div>
   </section>
-  <p style="margin-top:60px;">Explore dedicated pages: <a href="/lite">Lite</a> · <a href="/standard">Standard</a> · <a href="/full">Full</a> · <a href="/scout">Scout</a></p>
+
+  <section class="container">
+    <FeatureBlock title="Insight AI" text="Ask your numbers anything using natural language. Receive instant answers, forecasts, and explanatory insights." image="/images/ai-query-mockup.png" alt="Insight AI query" />
+    <FeatureBlock title="Insight Teams" text="Role-based access, collaborative approvals, and comprehensive audit trails enable seamless teamwork." image="/images/teams-mockup.png" alt="Teams interface" reverse />
+    <FeatureBlock title="Mobile-Ready" text="Every feature works beautifully on iOS and Android devices with no app installation required." image="/images/mobile-mockup.png" alt="Mobile preview" />
+    <FeatureBlock title="BizForma" text="Guided 11-step business formation assistant helping founders move from concept to compliant entity efficiently." image="/images/scout-mockup.png" alt="BizForma preview" reverse link="https://bizforma.turneratlanta.com" linkText="Open BizForma →" />
+  </section>
+
+  <CtaFinal />
 </Layout>
