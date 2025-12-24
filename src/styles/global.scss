@@ -1,21 +1,35 @@
-// Variables for neon theme
 $bg-primary: #0a0a2a;
 $bg-card: linear-gradient(135deg, #1a1a4a, #0f0f3a);
 $cyan: #00ffff;
 $pink: #ff69b4;
-$green-check: #00ff00;
 
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: $bg-primary;
-  color: #ffffff;
+body { margin: 0; font-family: Arial, sans-serif; background: $bg-primary; color: #fff; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; }
+
+.hero { position: relative; }
+.hero-image { width: 100%; height: auto; display: block; }
+.hero-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; }
+.hero-overlay h1 { font-size: 3rem; color: $cyan; text-shadow: 0 0 15px $cyan; }
+.hero-overlay p { font-size: 1.5rem; color: $pink; }
+
+.tiers-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+@media (min-width: 768px) { .tiers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .tiers-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.tier-card {
+  background: $bg-card; border-radius: 15px; padding: 40px 20px; box-shadow: 0 10px 30px rgba(0,255,255,.1);
+  border: 1px solid rgba(0,255,255,.2); transition: all .3s;
+  &.recommended { border: 2px solid $pink; position: relative;
+    &::before { content: 'Recommended'; position: absolute; top: -10px; right: 20px; background: $pink; padding: 5px 20px; border-radius: 20px; }
+  }
+  &:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,255,255,.3); }
 }
+.tier-name { color: $pink; font-size: 1.8rem; }
+.price { font-size: 2.5rem; color: $cyan; margin: 20px 0; }
+.description { font-size: 1.2rem; }
+.features { font-size: 1rem; line-height: 1.6; margin: 20px 0; }
+.cta { display: block; width: 80%; margin: 20px auto 0; padding: 15px; background: $pink; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Add all previous SCSS rules here: hero, tiers-grid, tier-card, etc. */
+.feature-block { display: flex; flex-direction: column; align-items: center; gap: 20px; margin: 60px 0; }
+.feature-block.reverse { flex-direction: column-reverse; }
+.feature-image { width: 100%; max-width: 600px; border-radius: 15px; }
