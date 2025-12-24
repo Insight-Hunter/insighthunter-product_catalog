@@ -1,0 +1,21 @@
+---
+// Props if needed
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <style lang="scss" global>
+      @import '../styles/global.scss';
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
