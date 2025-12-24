@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout title="Contact - Insight Hunter">
+  <Hero />
+  <section class="container">
+    <p style="font-size:2rem; margin:60px 0 32px;">Contact Information</p>
+    <p>Reach out to Insight Hunter for support, inquiries, or partnerships. Our team is available to assist with product questions, technical issues, or custom solutions.</p>
+    <p>Email: support@insighthunter.app | Phone: +1-123-456-7890 | Address: 123 Finance St, Atlanta, GA 30301</p>
+    <form action="https://formspree.io/f/yourformid" method="POST"> <!-- Replace 'yourformid' with actual Formspree ID -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>For FAQs, visit the dedicated page. Company updates in updates section. News and tech details available accordingly.</p>
+  </section>
+</Layout>
