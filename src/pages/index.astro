@@ -8,19 +8,24 @@ import CtaFinal from '../components/CtaFinal.astro';
 <Layout title="Insight Hunter">
   <Hero />
 
+  <section class="container">
+    <p style="font-size:1.6rem; margin:60px 0 32px;">Welcome to Insight Hunter, the comprehensive platform for financial intelligence and business tools.</p>
+    <p>This site serves as your central resource for all technical specifications, company updates, news articles, contact details, and frequently asked questions about our software and organisation. Explore our product editions below, or navigate to dedicated sections for in-depth information.</p>
+  </section>
+
   <section class="pricing container">
     <div class="tiers-grid">
-      <TierCard name="Lite" price="Free" description="Zero-friction local insights for solo operators." features="Instant bank connection, runway calculator, PDF exports." ctaText="Open Lite" ctaHref="/lite" />
-      <TierCard name="Standard" price="$49/month" description="Forecasts and alerts for growing teams." features="Multi-entity support, rolling forecasts, investor dashboards." ctaText="Open Standard" ctaHref="/standard" />
-      <TierCard name="Full Enterprise" price="Custom" description="GAAP-aligned autonomous finance platform." features="Role-based teams, audit trails, AI execution." ctaText="Contact for Quote" ctaHref="/full" recommended />
+      <TierCard name="Lite" price="Free" description="Zero-friction local insights for solo operators." features="Instant bank connection provides immediate access to P&L snapshots. Burn rate and runway calculations help monitor cash flow. One-click PDF exports are ideal for investor presentations. Designed for indie hackers and lean teams seeking quick clarity without cloud dependencies." ctaText="Open Lite" ctaHref="/lite" />
+      <TierCard name="Standard" price="$49/month" description="Forecasts and alerts for growing teams." features="Multi-entity support allows management of multiple accounts seamlessly. Rolling forecasts offer 12-month trends for strategic planning. Investor-ready dashboards display key metrics clearly. Automated alerts notify when burn or runway shifts occur. Exports are optimised for CPAs, boards, and investors." ctaText="Open Standard" ctaHref="/standard" />
+      <TierCard name="Full Enterprise" price="Custom" description="GAAP-aligned autonomous finance platform." features="All Standard features are included with additional Scout integration for scenarios. Team access includes roles and permissions for secure collaboration. Audit logs and activity history ensure compliance. Advanced automations streamline workflows. Priority support and guided onboarding facilitate smooth implementation." ctaText="Contact for Quote" ctaHref="/full" recommended />
     </div>
   </section>
 
   <section class="container">
-    <FeatureBlock title="Insight AI" text="Ask your numbers anything using natural language. Receive instant answers, forecasts, and explanatory insights." image="/images/ai-query-mockup.png" alt="Insight AI query" />
-    <FeatureBlock title="Insight Teams" text="Role-based access, collaborative approvals, and comprehensive audit trails enable seamless teamwork." image="/images/teams-mockup.png" alt="Teams interface" reverse />
-    <FeatureBlock title="Mobile-Ready" text="Every feature works beautifully on iOS and Android devices with no app installation required." image="/images/mobile-mockup.png" alt="Mobile preview" />
-    <FeatureBlock title="BizForma" text="Guided 11-step business formation assistant helping founders move from concept to compliant entity efficiently." image="/images/scout-mockup.png" alt="BizForma preview" reverse link="https://bizforma.turneratlanta.com" linkText="Open BizForma →" />
+    <FeatureBlock title="Insight AI" text="Ask your numbers anything using natural language queries. This feature provides instant answers, detailed forecasts, and insightful explanations without the need for complex dashboards or manual data entry. It supports a wide range of financial questions, from cash flow changes to revenue projections." image="/images/ai-query-mockup.png" alt="Insight AI query" />
+    <FeatureBlock title="Insight Teams" text="Role-based access enables tailored permissions for team members. Collaborative approvals streamline decision-making processes. Comprehensive audit trails track all actions for compliance and review. Built for finance-heavy teams to work efficiently together." image="/images/teams-mockup.png" alt="Teams interface" reverse />
+    <FeatureBlock title="Mobile-Ready" text="Every feature functions seamlessly on iOS and Android devices. No app installation is required, allowing access from any mobile browser. This ensures founders and teams can monitor finances, run scenarios, and collaborate on the go." image="/images/mobile-mockup.png" alt="Mobile preview" />
+    <FeatureBlock title="BizForma" text="The guided business formation assistant offers an 11-step process from concept development to compliance. It includes tips for naming, entity selection, registration, EIN acquisition, and marketing setup. Perfect for new founders launching ventures with structured support." image="/images/scout-mockup.png" alt="BizForma preview" reverse link="https://bizforma.turneratlanta.com" linkText="Open BizForma →" />
   </section>
 
   <CtaFinal />
