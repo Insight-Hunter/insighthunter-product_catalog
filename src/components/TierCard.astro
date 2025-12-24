@@ -1,14 +1,8 @@
 ---
 interface Props {
-  name: string;
-  price: string;
-  description: string;
-  features: string;
-  ctaText: string;
-  ctaHref: string;
-  recommended?: boolean;
+  name: string; price: string; description: string; features: string;
+  ctaText: string; ctaHref: string; recommended?: boolean;
 }
-
 const { name, price, description, features, ctaText, ctaHref, recommended = false } = Astro.props;
 ---
 <div class={`tier-card ${recommended ? 'recommended' : ''}`}>
