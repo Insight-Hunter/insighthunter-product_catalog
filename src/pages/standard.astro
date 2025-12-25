@@ -1,15 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
 ---
 <Layout title="Insight Hunter Standard">
   <Hero />
   <section class="container">
-    <p style="font-size:2rem; margin:60px 0 32px;">Insight Hunter Standard delivers everyday financial intelligence optimised for growing teams and multi-entity operations.</p>
-    <p>This edition builds on Lite by adding support for multiple accounts and entities, enabling seamless management across organisations. Rolling 12-month forecasts provide trend analysis for strategic decision-making. Investor-ready dashboards display key metrics in real time, while automated email alerts notify users of shifts in burn rate or runway.</p>
-    <p>Exports are formatted for compatibility with CPAs, board members, and investors, ensuring professional communication. The technology stack includes advanced data aggregation and secure cloud syncing options for team collaboration, with full compatibility across desktop and mobile platforms.</p>
-    <img src="/images/standard-mockup.png" alt="Standard interface" class="feature-image">
-    <p>Stay informed with company updates on our dedicated page. For inquiries or support, refer to the contact section or FAQs.</p>
-    <a href="/shop" class="cta" style="display:inline-block; margin:60px auto;">Purchase Standard</a>
+    <p style="font-size:2.2rem; margin:60px 0 32px;">Insight Hunter Standard delivers comprehensive financial intelligence for growing teams, combining automation with secure integrations for real-time FP&A.</p>
+    <p>This edition supports multi-entity consolidation, rolling 12-month forecasts, and automated alerts for burn or runway shifts. Sync with over 350 apps—including QuickBooks, Stripe, Gusto, HubSpot, and payroll systems—for seamless data flow into customizable dashboards. Track unit economics, margins by client or service, and revenue trends in one unified view.</p>
+    <p>New features include driver-based budgeting, plan-vs-actual analysis, and investor-ready reports (P&L, balance sheet, cash flow) generated automatically. AI enhances natural language queries for deeper insights, such as ROI across channels or profitability by segment. Standard enables collaborative team access with basic roles, ensuring aligned decision-making.</p>
+    <img src="/images/standard-mockup.png" alt="Standard integrated dashboard" class="feature-image">
+    <p>Ideal for startups scaling operations, Standard provides the tools to modernize finance without complexity. For enterprise-grade AI CFO and human support, consider Full.</p>
+    <a href="/shop" class="cta" style="display:inline-block; margin:60px auto;">Start Standard Trial</a>
+  </section>
+
+  <section class="container">
+    <FeatureBlock title="Extensive Integrations" text="Automated syncing with accounting, CRM, and billing apps ensures real-time data accuracy across entities." image="/images/teams-mockup.png" alt="Integration overview" />
+    <FeatureBlock title="Advanced Forecasting" text="Multi-scenario modeling and AI-driven predictions support strategic planning for growth." image="/images/ai-query-mockup.png" alt="Forecast scenarios" reverse />
   </section>
 </Layout>
