@@ -1,15 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
 ---
 <Layout title="Insight Hunter Full Enterprise">
   <Hero />
   <section class="container">
-    <p style="font-size:2rem; margin:60px 0 32px;">Insight Hunter Full Enterprise is the complete GAAP-aligned, AI-powered command center for finance-heavy teams and organisations.</p>
-    <p>This edition encompasses all features from Standard, plus integrated Scout capabilities for advanced scenario planning. Team access is managed with granular roles and permissions, ensuring secure collaboration. Audit logs and activity history support compliance requirements, while advanced automations and workflows streamline daily operations.</p>
-    <p>Priority support and guided onboarding are included to facilitate implementation. The technical foundation leverages autonomous decision engines for real-time execution, with robust integration options for existing systems. It is designed for scalability, supporting large teams across multiple entities.</p>
-    <img src="/images/full-mockup.png" alt="Full Enterprise dashboard" class="feature-image">
-    <p>Company updates and news related to Enterprise features are available on respective pages. Contact us for custom pricing or consult FAQs for common queries.</p>
-    <a href="/contact" class="cta" style="display:inline-block; margin:60px auto;">Request Quote</a>
+    <p style="font-size:2.2rem; margin:60px 0 32px;">Insight Hunter Full Enterprise serves as the GAAP-aligned, AI-powered autonomous FP&A platform for finance-heavy organisations and scaling enterprises.</p>
+    <p>This edition encompasses all Standard capabilities with advanced automations, role-based team access, comprehensive audit trails, and priority support. Integrate Scout for robust what-if scenarios, modeling impacts from headcount, market conditions, or revenue streams with high accuracy.</p>
+    <p>New additions include an AI CFO mode for instant strategic recommendations, anomaly detection, and benchmarks tailored to industries (SaaS, agencies, retention). Optional part-time human CFO consulting provides expert guidance on complex scenarios. Generate board-ready reports, payout analyses, and custom operational metrics effortlessly.</p>
+    <p>Full supports multi-currency consolidation, demand forecasting, and revenue leak detection, ensuring zero blind spots in financial operations.</p>
+    <img src="/images/full-mockup.png" alt="Full Enterprise AI CFO dashboard" class="feature-image">
+    <p>Designed for complete control and compliance at scale. Contact for custom implementation and pricing details.</p>
+    <a href="/contact" class="cta" style="display:inline-block; margin:60px auto;">Request Demo & Quote</a>
+  </section>
+
+  <section class="container">
+    <FeatureBlock title="AI CFO Intelligence" text="Chat-based AI provides tailored advice, benchmarks, and predictive insights connected to your full data ecosystem." image="/images/ai-query-mockup.png" alt="AI CFO interface" />
+    <FeatureBlock title="Human-Backed Expertise" text="Optional dedicated CFO support for strategic reviews and custom modeling." image="/images/teams-mockup.png" alt="Human CFO collaboration" reverse />
   </section>
 </Layout>
