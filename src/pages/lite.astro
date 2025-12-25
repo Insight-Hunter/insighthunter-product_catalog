@@ -1,15 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
 ---
 <Layout title="Insight Hunter Lite">
   <Hero />
   <section class="container">
-    <p style="font-size:2rem; margin:60px 0 32px;">Insight Hunter Lite offers immediate financial clarity with no cloud reliance, no login requirements, and zero setup overhead.</p>
-    <p>This edition is tailored for solo founders, indie hackers, and lean operators who need quick access to essential metrics. The local-first architecture ensures data privacy while delivering instant P&L snapshots, precise burn rate calculations, and extended runway projections. One-click PDF exports are optimised for sharing with investors or advisors, providing professional reports without additional tools.</p>
-    <p>Technical details include compatibility with major banks via read-only connections, automatic data syncing, and a minimal neon UI for intuitive navigation. Lite runs entirely on your machine, supporting macOS, Windows, and Linux environments.</p>
-    <img src="/images/lite-mockup.png" alt="Lite interface" class="feature-image">
-    <p>For company updates related to Lite, visit our updates page. Frequently asked questions about Lite can be found in the FAQs section.</p>
+    <p style="font-size:2.2rem; margin:60px 0 32px;">Insight Hunter Lite provides zero-friction, local-first financial intelligence for solo founders and lean operators, delivering immediate clarity without cloud dependencies.</p>
+    <p>This edition runs entirely on your machine, ensuring complete data privacy while offering automated P&L snapshots, burn rate and runway calculations, and basic cash flow tracking. Connect banks locally for read-only imports, generating instant insights into financial health. New enhancements include real-time dashboards for key metrics, simple budgeting rules for recurring expenses, and one-click PDF exports of investor-ready reports, including basic balance sheets and unit economics overviews.</p>
+    <p>Enjoy introductory scenario planning for personal what-if questions, such as hiring impacts or expense adjustments, powered by lightweight local AI processing. Lite supports CSV imports from accounting tools, laying the foundation for scalable FP&A as your needs grow. All data remains on-device, with no external syncing required.</p>
+    <img src="/images/lite-mockup.png" alt="Lite real-time dashboard and reports" class="feature-image">
+    <p>For seamless upgrades to advanced forecasting and integrations, explore Standard or Full editions. Company updates on Lite enhancements are available in the updates section.</p>
     <a href="#" class="cta" style="display:inline-block; margin:60px auto;">Download Lite Free</a>
+  </section>
+
+  <section class="container">
+    <FeatureBlock title="Local AI Insights" text="Natural language queries provide instant answers on runway, burn rate, or expense trends directly from your local data." image="/images/ai-query-mockup.png" alt="Local AI query example" />
+    <FeatureBlock title="Automated Basic Reports" text="Generate P&L statements, cash flow overviews, and simple forecasts offline for quick investor sharing." image="/images/mobile-mockup.png" alt="Offline report exports" reverse />
   </section>
 </Layout>
