@@ -1,7 +1,20 @@
-$bg-primary: #0a0a2a;
-$bg-card: linear-gradient(135deg, #1a1a4a, #0f0f3a);
-$cyan: #00ffff;
-$pink: #ff69b4;
+ 
+$color-deep-purple: #5B2C6F;
+$color-cyan: #00CFE8;
+$color-slate-gray: #2E2E3A;
+$color-light-gray: #F4F4F6;
+$color-white: #FFFFFF;
+$color-red-orange: #E74C3C;
+
+// Metallic Accents
+$gradient-metallic: linear-gradient(135deg, #5B2C6F, #2E2E3A);
+$shadow-metallic: 0 2px 8px rgba(91, 44, 111, 0.4);
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-size-base: 16px;
+$font-weight-bold: 700;
+
 
 * { box-sizing: border-box; }
 
@@ -12,6 +25,37 @@ body {
   color: #ffffff;
   line-height: 1.6;
 }
+
+.hero-section {
+  background: $color-deep-purple;
+  color: $color-white;
+  padding: 4rem 2rem;
+  font-family: $font-primary;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+
+    span.highlight {
+      color: $color-red-orange;
+    }
+  }
+
+  .cta-button {
+    background: $color-red-orange;
+    color: $color-white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: $shadow-metallic;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: darken($color-red-orange, 10%);
+    }
+  }
+}
+
 
 .container {
   max-width: 1200px;
