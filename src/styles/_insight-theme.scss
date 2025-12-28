@@ -1,0 +1,16 @@
+// 🎨 Color Palette
+$color-deep-purple: #5B2C6F;
+$color-cyan: #00CFE8;
+$color-slate-gray: #2E2E3A;
+$color-light-gray: #F4F4F6;
+$color-white: #FFFFFF;
+$color-red-orange: #E74C3C;
+
+// 🌈 Gradients & Shadows
+$gradient-metallic: linear-gradient(135deg, $color-deep-purple, $color-slate-gray);
+$shadow-metallic: 0 2px 8px rgba(91, 44, 111, 0.4);
+
+// 🖋 Typography
+$font-primary: 'Inter', sans-serif;
+$font-size-base: 16px;
+$font-weight-bold: 700;
