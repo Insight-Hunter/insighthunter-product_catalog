@@ -1,19 +1,18 @@
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #0a0a2a; color: #ffffff; margin: 0; padding: 0; }
-        .hero { position: relative; text-align: center; color: #ffffff; }
-        .hero img { width: 100%; max-height: 600px; object-fit: cover; }m
-        .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-        .hero-text h1 { font-size: 3em; color: #00ffff; text-shadow: 0 0 10px #00ffff; }
-        .hero-text p { font-size: 1.5em; color: #ff69b4; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        h2 { color: #00ffff; }
-        .tiers { display: flex; justify-content: space-between; }
-        .tier { flex: 1; margin: 10px; padding: 20px; background-color: #1a1a4a; border-radius: 10px; }
-        .tier h3 { color: #ff69b4; }
-        .price { font-size: 1.2em; color: #00ff00; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 10px; }
-        .cta { display: inline-block; padding: 10px 20px; background-color: #ff69b4; color: #ffffff; text-decoration: none; border-radius: 5px; }
-        .cta:hover { background-color: #ff1493; }
-        footer { text-align: center; padding: 20px; border-top: 1px solid #00ffff; }
-    </style>
+ .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+
+  @media (max-width: 1024px) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
