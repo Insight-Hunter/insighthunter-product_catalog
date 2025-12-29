@@ -1,0 +1,34 @@
+.nav {
+  background: $color-deep-purple;
+  padding: 1rem 0;
+
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-cyan;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+
+    li {
+      list-style: none;
+
+      a {
+        color: $color-white;
+        font-weight: 500;
+
+        &:hover {
+          color: $color-cyan;
+        }
+      }
+    }
+  }
+}
