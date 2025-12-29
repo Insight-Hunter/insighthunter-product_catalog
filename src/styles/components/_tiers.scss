@@ -1,1 +1,35 @@
+.tiers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+
+  .tier {
+    flex: 1;
+    min-width: 280px;
+    background: $color-deep-purple;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: $shadow-metallic;
+
+    h3 {
+      color: $color-red-orange;
+    }
+
+    .price {
+      font-size: 1.2em;
+      color: $color-cyan;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        color: $color-white;
+      }
+    }
+  }
+}
 
