@@ -1,35 +1,39 @@
 .tiers {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  gap: $spacing-md;
+  justify-content: center;
 
   .tier {
-    flex: 1;
-    min-width: 280px;
+    flex: 1 1 300px;
     background: $color-deep-purple;
     border-radius: 10px;
-    padding: 20px;
+    padding: $spacing-md;
     box-shadow: $shadow-metallic;
 
     h3 {
       color: $color-red-orange;
+      margin-bottom: $spacing-xs;
     }
 
     .price {
-      font-size: 1.2em;
+      font-size: 1.1rem;
       color: $color-cyan;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      color: $color-light-gray;
+      margin-bottom: $spacing-sm;
     }
 
     ul {
-      list-style: none;
-      padding: 0;
+      margin-bottom: $spacing-sm;
 
       li {
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
         color: $color-white;
       }
     }
   }
 }
-
