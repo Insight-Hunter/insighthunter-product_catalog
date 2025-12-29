@@ -1,13 +1,12 @@
-// 1. Base setup
 @import 'base/reset';
 @import 'base/variables';
 @import 'base/typography';
 
-// 2. Layout
 @import 'layout/container';
 
-// 3. Components
+@import 'components/nav';
 @import 'components/hero';
 @import 'components/tiers';
-@import 'components/cta';
+@import 'components/apps';
+@import 'components/comingsoon';
 @import 'components/footer';
