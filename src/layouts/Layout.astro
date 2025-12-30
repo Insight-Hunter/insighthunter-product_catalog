@@ -1,7 +1,9 @@
 ---
 import Nav from '../components/Nav.astro';
+import stylesheet from '../styles/global.scss';
 interface Props { title: string; }
 const { title } = Astro.props;
+
 ---
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@ const { title } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <style lang="scss" global>
-    @import '../styles/global.scss';
+    @use '../styles/global.scss';
   </style>
 </head>
 <body>
@@ -18,10 +20,10 @@ const { title } = Astro.props;
 </body>
 <script>
 window.SnipcartSettings = {
-  publicApiKey: "YOUR_SNIPCART_API_KEY", // Replace with your key
+  publicApiKey: "OGRmM2Y1NjktOWMxOC00MDc2LWI0MWMtZTYwMTZkOTllYThlNjM5MDI2MTY5MDg3NDc5MjYz", // Replace with your key
   loadStrategy: "on-user-interaction",
 };
 (function(){var s=document.createElement("script");s.async=true;s.src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js";document.getElementsByTagName("head")[0].appendChild(s);})();
 </script>
-<div hidden id="snipcart" data-api-key="YOUR_SNIPCART_API_KEY"></div> <!-- Replace key -->
+<div hidden id="snipcart" data-api-key="OGRmM2Y1NjktOWMxOC00MDc2LWI0MWMtZTYwMTZkOTllYThlNjM5MDI2MTY5MDg3NDc5MjYz"></div> <!-- Replace key -->
 </html>

@@ -1,0 +1,13 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md;
+
+  @media (max-width: 768px) {
+    padding: $spacing-sm;
+  }
+
+  @media (max-width: 480px) {
+    padding: $spacing-xs;
+  }
+}

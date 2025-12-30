@@ -1,1 +1,39 @@
+.tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  justify-content: center;
 
+  .tier {
+    flex: 1 1 300px;
+    background: $color-deep-purple;
+    border-radius: 10px;
+    padding: $spacing-md;
+    box-shadow: $shadow-metallic;
+
+    h3 {
+      color: $color-red-orange;
+      margin-bottom: $spacing-xs;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: $color-cyan;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      color: $color-light-gray;
+      margin-bottom: $spacing-sm;
+    }
+
+    ul {
+      margin-bottom: $spacing-sm;
+
+      li {
+        margin-bottom: 0.5rem;
+        color: $color-white;
+      }
+    }
+  }
+}
