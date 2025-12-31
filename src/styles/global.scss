@@ -1,12 +1,12 @@
-@import 'base/reset';
-@import 'base/variables';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/variables' as vars;
+@use 'base/typography';
 
-@import 'layout/container';
+@use 'layout/container';
 
-@import 'components/nav';
-@import 'components/hero';
-@import 'components/tiers';
-@import 'components/apps';
-@import 'components/comingsoon';
-@import 'components/footer';
+@use 'components/nav';
+@use 'components/hero';
+@use 'components/tiers';
+@use 'components/apps';
+@use 'components/comingsoon';
+@use 'components/footer';
