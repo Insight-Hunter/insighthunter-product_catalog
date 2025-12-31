@@ -10,3 +10,21 @@
 @use 'components/apps';
 @use 'components/comingsoon';
 @use 'components/footer';
+
+:root {
+  --neon-cyan: #00ffff;
+  --neon-purple: #b400ff;
+  --neon-blue: #009dff;
+  --neon-bg: #0a0f1f;
+  --neon-text: #e6f7ff;
+
+  --glow-strong: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan);
+  --glow-soft: 0 0 10px var(--neon-blue);
+}
+
+body {
+  background: var(--neon-bg);
+  color: var(--neon-text);
+  font-family: system-ui, sans-serif;
+}
+
