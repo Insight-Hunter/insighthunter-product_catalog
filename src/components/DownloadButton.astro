@@ -1,0 +1,53 @@
+---
+const { mac, windows, linux } = Astro.props;
+---
+
+<div id="download-container" class="download-container">
+  <!-- Default fallback -->
+  <a id="download-btn" class="cta" href={mac}>Download</a>
+</div>
+
+<script>
+  const links = {
+    mac: "<?= mac ?>",
+    windows: "<?= windows ?>",
+    linux: "<?= linux ?>",
+  };
+
+  function detectOS() {
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    if (userAgent.includes("mac")) return "mac";
+    if (userAgent.includes("win")) return "windows";
+    if (userAgent.includes("linux")) return "linux";
+
+    return "mac"; // fallback
+  }
+
+  const os = detectOS();
+  const btn = document.getElementById("download-btn");
+
+  btn.textContent = `Download for ${os.charAt(0).toUpperCase() + os.slice(1)}`;
+  btn.href = links[os];
+</script>
+
+<style>
+.download-container {
+  margin-top: 1.5rem;
+}
+
+#download-btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  background: var(--neon-cyan);
+  color: #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#download-btn:hover {
+  box-shadow: var(--glow-strong);
+}
+</style>
