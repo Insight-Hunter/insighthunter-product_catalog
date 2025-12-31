@@ -13,4 +13,9 @@ features:
   - "One-click PDF exports for investors"
 ctaLabel: "Download Lite"
 ctaLink: "/downloads/lite"
+downloads:
+  mac: "/downloads/lite/InsightLite.dmg"
+  windows: "/downloads/lite/InsightLite.exe"
+  linux: "/downloads/lite/InsightLite.AppImage"
+
 ---
