@@ -1,8 +1,16 @@
 ---
-const { tiers = [] } = Astro.props;
 import TierCard from "./TierCard.astro";
+const { items = [] } = Astro.props;
 ---
 
 <div class="tiers">
-  {tiers.map((tier) => <TierCard {...tier} />)}
+  {items.map((item) => (
+    <TierCard
+      title={item.title}
+      price={item.price}
+      description={item.tagline}
+      features={item.features}
+      link={`/${item.slug}`}
+    />
+  ))}
 </div>
