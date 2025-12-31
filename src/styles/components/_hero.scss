@@ -1,32 +1,124 @@
+// components/_hero.scss
 .hero {
   position: relative;
-  text-align: center;
+  background:
+    radial-gradient(circle at top left, rgba($color-cyan, 0.7), transparent 60%),
+    radial-gradient(circle at bottom right, rgba($color-red-orange, 0.4), transparent 55%),
+    linear-gradient(135deg, $color-purple-ink, $color-gray-900);
+  color: $color-white;
+  padding: 4.5rem 0 3.75rem;
+  overflow: hidden;
 
-  img {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(
+      circle at 20% 0%,
+      rgba($color-metallic-gold, 0.08),
+      transparent 55%
+    );
+    mix-blend-mode: screen;
+    opacity: 0.8;
+    z-index: $z-hero-overlay;
   }
 
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: $spacing-sm;
-    max-width: 90%;
-    text-align: center;
+  .container {
+    position: relative;
+    z-index: $z-hero;
+  }
+}
 
-    h1 {
-      font-size: 2.5rem;
-      color: $color-cyan;
-      text-shadow: 0 0 10px $color-cyan;
-    }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: center;
 
-    p {
-      font-size: 1.25rem;
-      color: $color-red-orange;
-      margin-top: $spacing-xs;
+  @media (max-width: 860px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.hero-copy h1 {
+  font-family: $font-sans;
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  max-width: 34rem;
+  color: $color-gray-300;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.hero-footnote {
+  font-size: 0.8rem;
+  color: $color-gray-500;
+}
+
+.hero-panel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-card {
+  background: radial-gradient(circle at top left, #ffffff10 0%, #ffffff03 60%);
+  border-radius: $radius-card;
+  border: 1px solid rgba($color-metallic-champagne, 0.6);
+  box-shadow: $shadow-soft;
+  padding: 1.6rem 1.8rem;
+  max-width: 340px;
+  backdrop-filter: blur(20px);
+
+  h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.85rem;
+
+    li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-size: 0.86rem;
+      color: $color-gray-300;
+      margin-bottom: 0.4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          $color-cyan,
+          $color-metallic-gold,
+          $color-red-orange
+        );
+      }
     }
+  }
+
+  .hero-meta {
+    font-size: 0.75rem;
+    color: $color-gray-500;
   }
 }
