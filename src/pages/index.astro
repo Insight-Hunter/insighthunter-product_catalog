@@ -3,75 +3,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import TierGrid from "../components/TierGrid.astro";
 import Footer from "../components/Footer.astro";
+import { getCollection } from "astro:content";
 
-const editions = [
-  {
-    title: "Lite",
-    price: "Free",
-    description: "Local-first, zero-friction desktop clarity in under 60 seconds.",
-    features: [
-      "Runs on your machine—no logins, no cloud",
-      "1-click bank connection (read-only)",
-      "Auto P&L and cash flow snapshots",
-      "Burn rate and runway at a glance",
-      "One-click PDF exports for investors"
-    ],
-    link: "/lite/index.html"
-  },
-  {
-    title: "Standard",
-    price: "$$ (e.g., $49/month)",
-    description: "Everyday finance intelligence for growing teams.",
-    features: [
-      "Multi-account and multi-entity support",
-      "Rolling 12-month forecasts and trends",
-      "Investor-ready dashboards and metrics",
-      "Email alerts when burn or runway shifts",
-      "Exports for your CPA, board, and investors"
-    ],
-    link: "/standard/index.html"
-  },
-  {
-    title: "Full Enterprise AFP",
-    price: "$$$ (e.g., $199/month or custom)",
-    description: "The complete command center for finance-heavy teams.",
-    features: [
-      "All Standard + Scout features in one place",
-      "Team access with roles and permissions",
-      "Audit logs and activity history for compliance",
-      "Advanced automations and workflows",
-      "Priority support and guided onboarding"
-    ],
-    link: "/full/index.html"
-  }
-];
+const products = await getCollection("products");
 
-const showcased = [
-  {
-    title: "Insight Scout",
-    description: "Fast, focused financial scouting for “what-if” questions.",
-    features: [
-      "Rapid scenarios on revenue, burn, and hiring",
-      "Side-by-side views of best, base, and worst case",
-      "Save and share scenarios with advisors and investors",
-      "No heavy modeling—just quick, clear answers",
-      "Ideal for founders making weekly decisions"
-    ],
-    link: "/scout/index.html"
-  },
-  {
-    title: "BizForma",
-    description: "Business Formation Assistant - Automated Entity Creation and Promotion.",
-    features: [
-      "Entity Selection and Registration Guidance",
-      "Compliance reminders and tax account setup",
-      "Forms and contracts",
-      "AI powered benchmarking and marketing analysis",
-      "Business domain name, hosting, and website creation"
-    ],
-    link: "/bizforms/index.html"
-  }
-];
+// Group by category
+const editions = products
+  .filter((p) => p.data.category === "edition")
+  .map((p) => p.data);
+
+const apps = products
+  .filter((p) => p.data.category === "app")
+  .map((p) => p.data);
+
+const ai = products
+  .filter((p) => p.data.category === "ai")
+  .map((p) => p.data);
 ---
 
 <BaseLayout title="Insight Hunter — Finance Intelligence">
@@ -79,14 +26,13 @@ const showcased = [
 
   <div class="container">
     <h2>Pick the Edition That Matches How You Work</h2>
-    <TierGrid tiers={editions} />
+    <TierGrid items={editions} />
 
     <h2>Showcased Apps</h2>
-    <TierGrid tiers={showcased} />
+    <TierGrid items={apps} />
 
     <h2>Insight Hunter AI — Coming Soon</h2>
-    <p>Ask your numbers anything with natural language queries.</p>
-    <a href="/ai.html" class="cta">Preview</a>
+    <TierGrid items={ai} />
   </div>
 
   <Footer />
