@@ -4,6 +4,8 @@ import Hero from "../components/Hero.astro";
 import TierGrid from "../components/TierGrid.astro";
 import Footer from "../components/Footer.astro";
 import { getCollection } from "astro:content";
+import NeonHeader from "../components/NeonHeader.astro";
+
 
 const products = await getCollection("products");
 
@@ -25,7 +27,7 @@ const ai = products
   <Hero />
 
   <div class="container">
-    <h2>Pick the Edition That Matches How You Work</h2>
+    <NeonHeader text="Pick the Edition That Matches How You Work" />
     <TierGrid items={editions} />
 
     <h2>Showcased Apps</h2>
