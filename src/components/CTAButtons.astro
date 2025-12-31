@@ -1,0 +1,8 @@
+---
+const { primary, secondary } = Astro.props;
+---
+
+<div class="cta-buttons">
+  {primary && <a class="cta" href={primary.href}>{primary.label}</a>}
+  {secondary && <a class="cta secondary" href={secondary.href}>{secondary.label}</a>}
+</div>
