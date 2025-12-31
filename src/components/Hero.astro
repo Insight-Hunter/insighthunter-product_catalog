@@ -1,7 +1,12 @@
 ---
 const { image = "/src/assets/insight-hunter-ai-hero.png" } = Astro.props;
 ---
-
+<style>
+.hero img {
+  width: 260px;
+  filter: drop-shadow(0 0 20px var(--neon-cyan));
+  animation: pulse 4s ease-in-out infinite;
+}
 <section class="hero">
   <img src={image} alt="Insight Hunter AI Robot" />
   <div class="hero-text">
@@ -12,4 +17,12 @@ const { image = "/src/assets/insight-hunter-ai-hero.png" } = Astro.props;
     </p>
   </div>
 </section>
+
+@keyframes pulse {
+  0% { filter: drop-shadow(0 0 10px var(--neon-cyan)); }
+  50% { filter: drop-shadow(0 0 30px var(--neon-purple)); }
+  100% { filter: drop-shadow(0 0 10px var(--neon-cyan)); }
+}
+</style>
+
 
