@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import ProductLayout from "../../layouts/ProductLayout.astro";
+import ProductHero from "../../components/ProductHero.astro";
+import FeatureList from "../../components/FeatureList.astro";
+import CTAButtons from "../../components/CTAButtons.astro";
+
+const { product } = Astro.params;
+const products = await getCollection("products");
+const entry = products.find((p) => p.slug === product);
+
+if (!entry) {
+  throw new Error(`Product not found: ${product}`);
+}
+
+const data = entry.data;
+---
+
+<ProductLayout title={data.title} tagline={data.tagline}>
+  <ProductHero
+    image={data.image}
+    title={data.title}
+    description={data.tagline}
+  />
+
+  <FeatureList features={data.features} />
+
+  <CTAButtons
+    primary={{ href: data.ctaLink, label: data.ctaLabel }}
+  />
+</ProductLayout>
