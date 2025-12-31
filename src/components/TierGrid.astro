@@ -1,0 +1,8 @@
+---
+const { tiers = [] } = Astro.props;
+import TierCard from "./TierCard.astro";
+---
+
+<div class="tiers">
+  {tiers.map((tier) => <TierCard {...tier} />)}
+</div>
