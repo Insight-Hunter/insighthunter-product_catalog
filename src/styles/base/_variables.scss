@@ -1,29 +1,36 @@
-// Colors
-$color-deep-purple: #5B2C6F;
-$color-cyan: #00CFE8;
-$color-slate-gray: #2E2E3A;
-$color-light-gray: #F4F4F6;
-$color-white: #FFFFFF;
-$color-red-orange: #E74C3C;
+// base/_variables.scss
 
-// Gradients & Shadows
-$gradient-metallic: linear-gradient(135deg, $color-deep-purple, $color-slate-gray);
-$shadow-metallic: 0 2px 8px rgba(91, 44, 111, 0.4);
+// Core brand
+$color-purple-deep: #673ab7;
+$color-purple-ink: #24143f;
+
+// Accents
+$color-cyan: #00b8d9;
+$color-cyan-soft: #00acc1;
+$color-red-orange: #ff3d00;
+
+// Metallic neutrals
+$color-metallic-gold: #d9bf77;
+$color-metallic-champagne: #c0b283;
+
+// Grays
+$color-gray-900: #121212;
+$color-gray-800: #20232a;
+$color-gray-700: #2c2f36;
+$color-gray-500: #9ea2af;
+$color-gray-300: #d0d4df;
+$color-white: #ffffff;
+
+// Layout
+$container-max-width: 1120px;
+$radius-card: 14px;
+$shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
 
 // Typography
-$font-primary: 'Inter', sans-serif;
-$font-size-base: 16px;
-$font-weight-bold: 700;
-
-// Spacing
-$spacing-xs: 0.5rem;
-$spacing-sm: 1rem;
-$spacing-md: 2rem;
-$spacing-lg: 4rem;
+$font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  "Segoe UI", sans-serif;
 
 // Z-index
-$z-header: 1000;
-$z-overlay: 1100;
-$z-modal: 1200;
-
-
+$z-nav: 100;
+$z-hero: 1;
+$z-hero-overlay: 0;
