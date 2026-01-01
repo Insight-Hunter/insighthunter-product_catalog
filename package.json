@@ -4,6 +4,7 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
+    "generate:products": "node tools/generate-products.js",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
