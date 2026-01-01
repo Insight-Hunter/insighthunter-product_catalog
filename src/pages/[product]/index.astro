@@ -4,6 +4,8 @@ import ProductLayout from "../../layouts/ProductLayout.astro";
 import ProductHero from "../../components/ProductHero.astro";
 import FeatureList from "../../components/FeatureList.astro";
 import CTAButtons from "../../components/CTAButtons.astro";
+import DownloadButton from "../../components/DownloadButton.astro";
+
 
 const { product } = Astro.params;
 const products = await getCollection("products");
@@ -28,4 +30,12 @@ const data = entry.data;
   <CTAButtons
     primary={{ href: data.ctaLink, label: data.ctaLabel }}
   />
+{data.downloads && (
+  <DownloadButton
+    mac={data.downloads.mac}
+    windows={data.downloads.windows}
+    linux={data.downloads.linux}
+  />
+)}
+
 </ProductLayout>
