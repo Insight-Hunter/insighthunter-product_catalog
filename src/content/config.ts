@@ -12,6 +12,11 @@ const products = defineCollection({
     ctaLabel: z.string().optional(),
     ctaLink: z.string().optional(),
     category: z.enum(["edition", "app", "ai"]),
+    downloads: z.object({
+      mac: z.string(),
+      windows: z.string(),
+      linux: z.string(),
+    }),
   }),
 });
 
