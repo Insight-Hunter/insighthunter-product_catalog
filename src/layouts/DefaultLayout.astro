@@ -9,11 +9,12 @@ import Nav from '../components/Nav.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <style lang="scss" global>
+       @use '../styles/global.scss';
+    </style>
   </head>
-<style lang="scss">
   <body>
     <Nav />
     <slot />
   </body>
-</style>
 </html>
