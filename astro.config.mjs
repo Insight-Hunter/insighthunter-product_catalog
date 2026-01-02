@@ -1,13 +1,16 @@
 
 import { defineConfig } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from "@tailwindcss/vite";
 
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), mdx(), icon()],
-  output: 'static',  // Explicitly set to static (often the default, but recommended here)
-  site: 'https://insighthunter.app'
+  site: 'https://insighthunter.app',
+  integrations: [mdx(), sitemap(), icon()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  output: 'static',
 });
