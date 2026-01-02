@@ -1,0 +1,16 @@
+---
+import TierCard from "./TierCard.astro";
+const { items = [] } = Astro.props;
+---
+
+<div class="tiers">
+  {items.map((item) => (
+    <TierCard
+      title={item.title}
+      price={item.price}
+      description={item.tagline}
+      features={item.features}
+      link={`/${item.slug}`}
+    />
+  ))}
+</div>

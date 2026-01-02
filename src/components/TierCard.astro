@@ -1,23 +1,15 @@
 ---
-interface Props {
-  name: string;
-  price: string;
-  subtitle?: string;
-  users?: string;
-  features: string[]; /* Change to array for list */
-  ctaText: string;
-  ctaHref: string;
-  recommended?: boolean;
-}
-const { name, price, subtitle, users, features, ctaText, ctaHref, recommended = false } = Astro.props;
+const { title, price, description, features = [], link } = Astro.props;
 ---
-<div class={`tier-card ${recommended ? 'recommended' : ''}`}>
-  <h2 class="tier-name">{name}</h2>
-  {subtitle && <p class="subtitle">{subtitle}</p>}
-  <p class="price">{price}</p>
-  {users && <p class="users">{users}</p>}
-  <ul class="feature-list">
-    {features.map(feature => <li>{feature}</li>)}
+
+<div class="tier">
+  <h3>{title}</h3>
+  {price && <p class="price">{price}</p>}
+  <p>{description}</p>
+
+  <ul>
+    {features.map((f) => <li>{f}</li>)}
   </ul>
-  <a href={ctaHref} class="cta">{ctaText}</a>
+
+  {link && <a href={link} class="cta">Open {title}</a>}
 </div>

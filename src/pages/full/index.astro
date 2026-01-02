@@ -1,0 +1,28 @@
+---
+import ProductLayout from "../../layouts/ProductLayout.astro";
+import ProductHero from "../../components/ProductHero.astro";
+import FeatureList from "../../components/FeatureList.astro";
+import CTAButtons from "../../components/CTAButtons.astro";
+
+const features = [
+  "All Standard + Scout features in one place",
+  "Team access with roles and permissions",
+  "Audit logs and activity history for compliance",
+  "Advanced automations and workflows",
+  "Priority support and guided onboarding"
+];
+---
+
+<ProductLayout title="Insight Hunter Full Enterprise AFP" tagline="The complete command center for finance-heavy teams">
+  <ProductHero
+    image="/src/assets/insight-hunter-ai-hero.png"
+    title="Full Enterprise AFP"
+    description="Enterprise-grade finance intelligence with governance and automation."
+  />
+
+  <FeatureList features={features} />
+
+  <CTAButtons
+    primary={{ href: "/contact/enterprise", label: "Request Enterprise Access" }}
+  />
+</ProductLayout>

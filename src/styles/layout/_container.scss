@@ -1,13 +1,7 @@
+// layout/_container.scss
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: $spacing-md;
-
-  @media (max-width: 768px) {
-    padding: $spacing-sm;
-  }
-
-  @media (max-width: 480px) {
-    padding: $spacing-xs;
-  }
+  padding: 0 1.75rem;
 }

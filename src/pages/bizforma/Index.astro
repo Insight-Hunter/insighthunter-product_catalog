@@ -1,0 +1,28 @@
+---
+import ProductLayout from "../../layouts/ProductLayout.astro";
+import ProductHero from "../../components/ProductHero.astro";
+import FeatureList from "../../components/FeatureList.astro";
+import CTAButtons from "../../components/CTAButtons.astro";
+
+const features = [
+  "Entity selection and registration guidance",
+  "Compliance reminders and tax account setup",
+  "Forms and contracts",
+  "AI-powered benchmarking and marketing analysis",
+  "Business domain name, hosting, and website creation"
+];
+---
+
+<ProductLayout title="BizForma" tagline="Automated entity creation and business launch">
+  <ProductHero
+    image="/src/assets/insight-hunter-ai-hero.png"
+    title="BizForma"
+    description="Your business formation assistant from idea to launch."
+  />
+
+  <FeatureList features={features} />
+
+  <CTAButtons
+    primary={{ href: "https://bizforma.turneratlanta.com", label: "Open BizForma" }}
+  />
+</ProductLayout>

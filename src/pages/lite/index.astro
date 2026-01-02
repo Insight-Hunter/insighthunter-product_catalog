@@ -1,0 +1,28 @@
+---
+import ProductLayout from "../../layouts/ProductLayout.astro";
+import ProductHero from "../../components/ProductHero.astro";
+import FeatureList from "../../components/FeatureList.astro";
+import CTAButtons from "../../components/CTAButtons.astro";
+
+const features = [
+  "Runs on your machine—no logins, no cloud",
+  "1-click bank connection (read-only)",
+  "Auto P&L and cash flow snapshots",
+  "Burn rate and runway at a glance",
+  "One-click PDF exports for investors"
+];
+---
+
+<ProductLayout title="Insight Hunter Lite" tagline="Local-first clarity in under 60 seconds">
+  <ProductHero
+    image="/src/assets/insight-hunter-ai-hero.png"
+    title="Lite Edition"
+    description="Zero-friction desktop finance intelligence."
+  />
+
+  <FeatureList features={features} />
+
+  <CTAButtons
+    primary={{ href: "/downloads/lite", label: "Download Lite" }}
+  />
+</ProductLayout>

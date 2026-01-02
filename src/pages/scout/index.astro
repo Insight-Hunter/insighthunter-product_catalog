@@ -1,0 +1,28 @@
+---
+import ProductLayout from "../../layouts/ProductLayout.astro";
+import ProductHero from "../../components/ProductHero.astro";
+import FeatureList from "../../components/FeatureList.astro";
+import CTAButtons from "../../components/CTAButtons.astro";
+
+const features = [
+  "Rapid scenarios on revenue, burn, and hiring",
+  "Side-by-side views of best, base, and worst case",
+  "Save and share scenarios with advisors and investors",
+  "No heavy modeling—just quick, clear answers",
+  "Ideal for founders making weekly decisions"
+];
+---
+
+<ProductLayout title="Insight Scout" tagline="Fast, focused financial scouting">
+  <ProductHero
+    image="/src/assets/insight-hunter-ai-hero.png"
+    title="Insight Scout"
+    description="Instant what‑if analysis for founders and operators."
+  />
+
+  <FeatureList features={features} />
+
+  <CTAButtons
+    primary={{ href: "/scout/app", label: "Open Scout" }}
+  />
+</ProductLayout>

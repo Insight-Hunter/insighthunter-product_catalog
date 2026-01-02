@@ -1,0 +1,28 @@
+---
+import ProductLayout from "../../layouts/ProductLayout.astro";
+import ProductHero from "../../components/ProductHero.astro";
+import FeatureList from "../../components/FeatureList.astro";
+import CTAButtons from "../../components/CTAButtons.astro";
+
+const features = [
+  "Multi-account and multi-entity support",
+  "Rolling 12-month forecasts and trends",
+  "Investor-ready dashboards and metrics",
+  "Email alerts when burn or runway shifts",
+  "Exports for your CPA, board, and investors"
+];
+---
+
+<ProductLayout title="Insight Hunter Standard" tagline="Everyday finance intelligence for growing teams">
+  <ProductHero
+    image="/src/assets/insight-hunter-ai-hero.png"
+    title="Standard Edition"
+    description="Powerful insights for teams that need more than spreadsheets."
+  />
+
+  <FeatureList features={features} />
+
+  <CTAButtons
+    primary={{ href: "/checkout/standard", label: "Start Standard" }}
+  />
+</ProductLayout>

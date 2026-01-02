@@ -1,0 +1,17 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+import ProductHero from "../components/ProductHero.astro";
+import CTAButtons from "../components/CTAButtons.astro";
+---
+
+<ProductLayout title="Insight Hunter AI" tagline="Coming Soon">
+  <ProductHero
+    image="/src/assets/insight-hunter-ai-hero.png"
+    title="Insight Hunter AI"
+    description="Ask your numbers anything with natural language queries."
+  />
+
+  <CTAButtons
+    primary={{ href: "/waitlist", label: "Join Waitlist" }}
+  />
+</ProductLayout>

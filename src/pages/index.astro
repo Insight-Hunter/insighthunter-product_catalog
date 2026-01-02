@@ -1,18 +1,43 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro';
-import Hero from '../components/Hero.astro';
-import Tiers from '../components/Tiers.astro';
-import Apps from '../components/Apps.astro';
-import ComingSoon from '../components/ComingSoon.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import TierGrid from "../components/TierGrid.astro";
+import Footer from "../components/Footer.astro";
+import { getCollection } from "astro:content";
+import NeonHeader from "../components/NeonHeader.astro";
+import "../styles/global.scss";
+
+
+
+const products = await getCollection("products");
+
+// Group by category
+const editions = products
+  .filter((p) => p.data.category === "edition")
+  .map((p) => p.data);
+
+const apps = products
+  .filter((p) => p.data.category === "app")
+  .map((p) => p.data);
+
+const ai = products
+  .filter((p) => p.data.category === "ai")
+  .map((p) => p.data);
 ---
 
-<DefaultLayout title="Insight Hunter — Finance Intelligence">
+<BaseLayout title="Insight Hunter — Finance Intelligence">
   <Hero />
+
   <div class="container">
-    <Tiers />
-    <Apps />
-    <ComingSoon />
+    <NeonHeader text="Pick the Edition That Matches How You Work" />
+    <TierGrid items={editions} />
+
+    <h2>Showcased Apps</h2>
+    <TierGrid items={apps} />
+
+    <h2>Insight Hunter AI — Coming Soon</h2>
+    <TierGrid items={ai} />
   </div>
+
   <Footer />
-</DefaultLayout>
+</BaseLayout>
